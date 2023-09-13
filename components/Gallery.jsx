@@ -30,20 +30,21 @@ const params = {
   keyboard: {
     enabled: true,
   },
+
   grabCursor: true,
   centeredSlides: true,
+  // direction: 'vertical',
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: 'coverflow',
   navigation: {
     nextEl: '.gallery__swiper-next',
     prevEl: '.gallery__swiper-prev',
   },
-  direction: 'vertical',
-  slidesPerView: 2,
-  spaceBetween: 0,
-  effect: 'coverflow',
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 400,
+    depth: 0,
     modifier: 2.5,
     slideShadows: false,
   },

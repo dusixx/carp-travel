@@ -19,6 +19,7 @@ const params = {
   keyboard: {
     enabled: true,
   },
+  // navigation: true,
   slidesPerView: 1,
   effect: 'fade',
 };

@@ -20,7 +20,7 @@
   }
 
   .gallery__swiper-img {
-    @apply h-[320px] border border-white-10 w-[100%] object-cover object-center 
+    @apply h-[420px] border border-white-10 w-[100%] object-cover object-center 
     md:h-[300px] lg:h-[430px];
   }
 
@@ -30,7 +30,7 @@
 
   .gallery__swiper-controls {
     @apply absolute bottom-0 left-1/2 z-50 translate-x-[-50%] 
-      max-md:hidden flex md:gap-[50vw] lg:gap-[680px];
+      /* max-md:hidden */ flex gap-[30vw] md:gap-[50vw] lg:gap-[680px];
   }
 
   .gallery__swiper-prev,
