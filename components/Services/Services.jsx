@@ -19,6 +19,7 @@ const params = {
   keyboard: {
     enabled: true,
   },
+  allowTouchMove: false,
   // navigation: true,
   slidesPerView: 1,
   effect: 'fade',
@@ -31,9 +32,10 @@ export const Services = () => {
   useEffect(() => {
     const swiperEl = swiperRef.current;
 
-    swiperEl.addEventListener('slidechange', () => {
-      setCurrentService(swiperEl.swiper.activeIndex);
-    });
+    // swiperEl.addEventListener('slidechange', () => {
+    //   console.log(swiperEl.swiper);
+    //   setCurrentService(swiperEl.swiper.activeIndex);
+    // });
 
     Object.assign(swiperEl, params);
     swiperEl.initialize();

@@ -29,7 +29,7 @@
   }
 
   .gallery__swiper-controls {
-    @apply absolute bottom-0 left-1/2 z-50 translate-x-[-50%] 
+    @apply absolute bottom-0 max-md:bottom-[40px] left-1/2 z-50 translate-x-[-50%] 
       /* max-md:hidden */ flex gap-[20vw] md:gap-[50vw] lg:gap-[680px];
   }
 

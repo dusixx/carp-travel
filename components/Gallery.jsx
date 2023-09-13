@@ -22,11 +22,12 @@ const params = {
   //   disableOnInteraction: true,
   //   pauseOnMouseEnter: true,
   // },
-  zoom: {
-    maxRatio: 1.5,
-    minRatio: 1,
-    toggle: true,
-  },
+  // zoom: {
+  //   maxRatio: 1.5,
+  //   minRatio: 1,
+  //   toggle: true,
+  // },
+  zoom: false,
   keyboard: {
     enabled: true,
   },
