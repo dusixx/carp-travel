@@ -25,7 +25,6 @@ const params = {
 
 export const Services = () => {
   const swiperRef = useRef(null);
-  const swiper = swiperRef.current?.swiper;
   const [currentService, setCurrentService] = useState(0);
 
   useEffect(() => {
@@ -35,11 +34,14 @@ export const Services = () => {
   }, []);
 
   const handleMenuItemClick = idx => {
+    const swiper = swiperRef.current?.swiper;
     setCurrentService(idx);
     swiper?.slideToLoop(idx);
   };
 
   const currentNum = `${currentService + 1}`.padStart(2, '0');
+  const servicesNum = `${services.length}`.padStart(2, '0');
+  const { tagline, about } = services[currentService];
 
   return (
     <section
@@ -52,7 +54,8 @@ export const Services = () => {
           <SectionTitle caption="We offer" accent={1} />
 
           <span className="services__current-num">
-            <span>{`${currentNum}/`}</span>05
+            <span>{`${currentNum}/`}</span>
+            {servicesNum}
           </span>
 
           {/* swiper */}
@@ -75,9 +78,7 @@ export const Services = () => {
           </swiper-container>
 
           <div className="services__desc">
-            <span className="services__tagline">
-              {services[currentService].tagline}
-            </span>
+            <span className="services__tagline">{tagline}</span>
 
             <ul className="services__menu">
               {services.map(({ name }, idx) => (
@@ -94,7 +95,7 @@ export const Services = () => {
               ))}
             </ul>
 
-            <p className="services__about">{services[currentService].about}</p>
+            <p className="services__about">{about}</p>
           </div>
         </div>
       </div>

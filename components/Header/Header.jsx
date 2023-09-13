@@ -22,16 +22,15 @@ export const Header = () => {
       setShowNav(!e.matches);
       setShowMenu(false);
     };
+
     mediaQuery.addEventListener('change', handleChangeMediaQuery);
     handleChangeMediaQuery(mediaQuery);
 
-    document.addEventListener(
-      'scroll',
-      throttle(
-        () => setShaded(headerRef.current.offsetHeight < window.scrollY),
-        150
-      )
-    );
+    const handleScroll = () =>
+      setShaded(headerRef.current.offsetHeight < window.scrollY);
+
+    document.addEventListener('scroll', throttle(handleScroll, 150));
+    handleScroll();
   }, []);
 
   return (
