@@ -9,7 +9,7 @@
   }
 
   .services__swiper {
-    @apply w-[280px] h-[213px] md:w-[463px] md:h-[370px] 
+    @apply w-[85vw] h-auto md:w-[463px] md:h-[370px] 
       lg:w-[607px] lg:h-[429px] mr-auto;
   }
 

@@ -39,6 +39,7 @@ module.exports = {
         'hero-bg': `${PAGE_HEADER_GRADIENT_30}, linear-gradient(${HERO_OVERLAY}, ${HERO_OVERLAY}), url(/hero-bg.jpg);`,
         'gallery-bg': `${PAGE_HEADER_GRADIENT_SEC}, linear-gradient(${GALLERY_OVERLAY}, ${GALLERY_OVERLAY}), url(/gallery-bg.jpg);`,
         'contacts-bg': `${PAGE_HEADER_GRADIENT_30}, linear-gradient(${CONTACTS_OVERLAY}, ${CONTACTS_OVERLAY}), url(/contacts-bg.jpg);`,
+        'about-bg': `${PAGE_HEADER_GRADIENT_30}, linear-gradient(${SERVICES_OVERLAY}, ${SERVICES_OVERLAY}), url(/about-bg.jpg);`,
       },
     },
   },

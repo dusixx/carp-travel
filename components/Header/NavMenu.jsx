@@ -3,6 +3,7 @@ import { func } from 'prop-types';
 import { scrollToTarget } from '@/helpers';
 
 const menuItems = {
+  // about: '#about',
   services: '#services',
   gallery: '#gallery',
   contacts: '#contacts',

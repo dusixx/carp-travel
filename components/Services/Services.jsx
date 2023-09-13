@@ -29,6 +29,11 @@ export const Services = () => {
 
   useEffect(() => {
     const swiperEl = swiperRef.current;
+
+    swiperEl.addEventListener('slidechange', () => {
+      setCurrentService(swiperEl.swiper.activeIndex);
+    });
+
     Object.assign(swiperEl, params);
     swiperEl.initialize();
   }, []);

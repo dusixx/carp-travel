@@ -12,7 +12,7 @@
   }
 
   .gallery__swiper-slide {
-    @apply relative md:opacity-20;
+    @apply relative opacity-20;
   }
 
   .gallery__swiper-slide.swiper-slide-active {
@@ -20,7 +20,7 @@
   }
 
   .gallery__swiper-img {
-    @apply h-[190px] border border-white-10 w-[100%] object-cover object-center 
+    @apply h-[320px] border border-white-10 w-[100%] object-cover object-center 
     md:h-[300px] lg:h-[430px];
   }
 
