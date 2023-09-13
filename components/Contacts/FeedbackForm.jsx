@@ -10,12 +10,15 @@ export const FeedbackForm = props => {
     reset,
     setError,
   } = useForm();
-  const onSubmit = data => console.log(data);
 
   const { fullName, email, message } = errors;
 
   return (
-    <form autoComplete="off" {...props} onSubmit={handleSubmit(onSubmit)}>
+    <form
+      autoComplete="off"
+      {...props}
+      onSubmit={handleSubmit(data => console.log(data))}
+    >
       <div className="feedback__field-group">
         <label className="feedback__field">
           <span>Full name</span>

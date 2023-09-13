@@ -3,22 +3,22 @@ import { func } from 'prop-types';
 import { scrollToTarget } from '@/helpers';
 
 const menuItems = {
-  services: () => scrollToTarget('#services'),
-  gallery: () => scrollToTarget('#gallery'),
-  contacts: () => scrollToTarget('#contacts'),
+  services: '#services',
+  gallery: '#gallery',
+  contacts: '#contacts',
 };
 
 export const NavMenu = ({ onItemClick }) => {
   return (
     <ul className="menu-list">
-      {Object.entries(menuItems).map(([name, action]) => (
+      {Object.entries(menuItems).map(([name, target]) => (
         <li key={name}>
           <button
             className="menu-item__btn"
             type="button"
             onClick={e => {
               onItemClick?.call(e);
-              setTimeout(action, 0);
+              setTimeout(() => scrollToTarget(target), 0);
             }}
           >
             {name}
