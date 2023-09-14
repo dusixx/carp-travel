@@ -1,6 +1,6 @@
 @layer components {
   .gallery {
-    @apply h-[800px] md:h-[575px] lg:h-[788px] bg-gallery-bg page-bg;
+    @apply h-max bg-gallery-bg page-bg;
   }
 
   .gallery__section-title {
