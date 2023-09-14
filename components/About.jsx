@@ -23,19 +23,19 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="about__group-sec">
-            <div className="about__tagline">
-              <span>From vacationers</span>
-              <span>to active travelers</span>
-              <span>we have a tour for everyone.</span>
-            </div>
-
-            <p className="about__para we-use">
-              <span>We use methods</span> that are time-tested and proven. Our
-              expert guides with in-depth knowledge of the Carpathian landscapes
-              lead you safely through the mysteries of these mountains.
-            </p>
+          {/* <div className="about__group-sec"> */}
+          <div className="about__tagline">
+            <span>From vacationers</span>
+            <span>to active travelers</span>
+            <span>we have a tour for everyone.</span>
           </div>
+
+          <p className="about__para we-use">
+            <span>We use methods</span> that are time-tested and proven. Our
+            expert guides with in-depth knowledge of the Carpathian landscapes
+            lead you safely through the mysteries of these mountains.
+          </p>
+          {/* </div> */}
           {/* </div> */}
         </div>
       </div>

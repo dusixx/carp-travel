@@ -1,6 +1,6 @@
 @layer components {
   .gallery {
-    @apply /* h-[800px] md:h-[575px] lg:h-[788px] */ bg-gallery-bg page-bg;
+    @apply bg-gallery-bg page-bg;
   }
 
   .gallery__section-title {
@@ -8,7 +8,7 @@
   }
 
   .gallery__swiper {
-    @apply /* mt-[20px] */ max-md:h-[650px] w-[90%] md:mt-[60px] lg:mt-[50px];
+    @apply h-[80vh] max-md:h-[650px] w-[90%];
   }
 
   .gallery__swiper-slide {
@@ -29,8 +29,8 @@
   }
 
   .gallery__swiper-controls {
-    @apply absolute bottom-0 max-md:bottom-[40px] left-1/2 z-50 translate-x-[-50%] 
-      /* max-md:hidden */ flex gap-[20vw] md:gap-[50vw] lg:gap-[680px];
+    @apply absolute bottom-[10vh] left-1/2 z-50 translate-x-[-50%] 
+      flex gap-[20vw] md:gap-[50vw] lg:gap-[680px];
   }
 
   .gallery__swiper-prev,
