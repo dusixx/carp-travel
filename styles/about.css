@@ -21,16 +21,17 @@
   }
 
   .about__tagline {
-    @apply flex flex-col w-[180px] text-[14px] leading-[1.4] uppercase
-     md:w-[221px] lg:w-[300px]
-     md:text-[16px] md:leading-[1.25] lg:text-[18px] lg:leading-[1.33]
-      [&>span]:flex [&>span:nth-of-type(2)]:ml-auto
-       md:mt-auto md:mr-auto lg:col-start-3 lg:row-start-2
-       max-md:ml-auto max-md:mt-[30px];
+    @apply flex flex-col 
+      w-[180px] text-[14px] leading-[1.4] uppercase
+      md:w-[230px] md:text-[16px] md:leading-[1.25] 
+      lg:w-[250px] lg:text-[18px] lg:leading-[1.33]
+      [&>span:nth-of-type(2)]:ml-auto
+      md:mt-auto md:mr-auto lg:col-start-3 lg:row-start-2
+      max-md:ml-auto max-md:mt-[30px];
   }
 
   .about__tagline > span:last-of-type {
-    @apply lowercase font-[200] tracking-[-0.14px] whitespace-nowrap;
+    @apply lowercase font-[200] md:tracking-[0.7px] whitespace-nowrap;
   }
 
   .about__para.we-use {
