@@ -1,6 +1,6 @@
 @layer components {
   .hero {
-    @apply /* h-[642px] md:h-[530px] lg:h-[763px] */ bg-hero-bg page-bg;
+    @apply bg-hero-bg page-bg;
   }
 
   .hero__container {

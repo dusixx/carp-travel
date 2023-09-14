@@ -1,6 +1,6 @@
 @layer components {
   .contacts {
-    @apply /* h-[856px] md:h-[691px] lg:h-[762px] */ bg-contacts-bg page-bg;
+    @apply bg-contacts-bg page-bg;
   }
 
   .contacts-item {
