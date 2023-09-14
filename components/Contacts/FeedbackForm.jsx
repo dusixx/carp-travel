@@ -65,7 +65,10 @@ export const FeedbackForm = props => {
         <label className="feedback__field">
           <span>Message</span>
           <textarea
-            className="feedback__message"
+            className={clsx(
+              'feedback__message',
+              email?.message && 'feedback__input--invalid'
+            )}
             {...register('message', validation.message)}
           />
           <p className="feedback__input-error">
