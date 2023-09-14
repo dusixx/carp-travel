@@ -4,7 +4,11 @@
   }
 
   .about__content {
-    @apply flex flex-col gap-[40px] md:grid md:gap-[76px];
+    @apply flex flex-col gap-[10px] md:grid md:gap-[76px];
+  }
+
+  .about .page-title {
+    @apply leading-none;
   }
 
   .about__group {
@@ -18,12 +22,13 @@
   .about__tagline {
     @apply flex flex-col w-[180px] text-[14px] leading-[1.4] uppercase
       [&>span]:flex [&>span:nth-of-type(2)]:ml-auto
-       md:mt-auto md:mr-auto lg:col-start-3 lg:row-start-2;
+       md:mt-auto md:mr-auto lg:col-start-3 lg:row-start-2
+       max-md:mt-[30px];
   }
 
   .about__para.we-use {
     @apply md:w-[463px] md:ml-auto lg:ml-auto lg:row-start-2 lg:col-end-2 lg:mt-auto
-    md:col-start-1 md:col-end-3;
+    md:col-start-1 md:col-end-3 max-md:mt-[30px];
   }
 
   .about__tagline > span:last-of-type {
