@@ -6,7 +6,10 @@
   не перебиваются нужные стили, например, в .hero__container */
   .inner-container {
     @apply w-[100%] max-w-[1280px] max-md:px-[20px]
-      px-[30px] py-[54px] pb-[64px] my-0 mx-auto relative;
+      px-[30px] py-[70px] pb-[60px] 
+      md:py-[80px] md:pb-[70px]
+      lg:py-[120px] lg:pb-[100px]
+      my-0 mx-auto relative;
   }
 
   .cornered {
