@@ -31,7 +31,7 @@
   }
 
   .about__tagline > span:last-of-type {
-    @apply lowercase font-[200] md:tracking-[0.7px] whitespace-nowrap;
+    @apply lowercase font-[200] tracking-[-0.2px] md:tracking-[0.7px] whitespace-nowrap;
   }
 
   .about__para.we-use {
