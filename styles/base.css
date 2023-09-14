@@ -1,6 +1,6 @@
 @layer base {
   body {
-    @apply text-white;
+    @apply text-white bg-[#151815];
   }
   /* если вне base поставить - 
   не перебиваются нужные стили, например, в .hero__container */
