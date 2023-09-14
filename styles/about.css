@@ -4,7 +4,7 @@
   }
 
   .about__content {
-    @apply flex flex-col gap-[15px] md:grid md:gap-[76px];
+    @apply flex flex-col gap-[15px] md:grid md:gap-[65px];
   }
 
   .about .page-title {
