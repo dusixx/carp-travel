@@ -12,7 +12,7 @@ import { SectionTitle } from './misc/SectionTitle';
 
 register();
 
-const images = 'forest hill lake polar-lights lagoon field horsehoe'.split(' ');
+const images = 'forest hill lake autumn rhodo winter pines'.split(' ');
 
 const params = {
   loop: true,
