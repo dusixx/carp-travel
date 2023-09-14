@@ -7,8 +7,8 @@
     @apply flex flex-col gap-[15px] md:grid md:gap-[65px];
   }
 
-  .about .page-title {
-    @apply leading-none;
+  .about .section-title {
+    @apply leading-none md:flex-nowrap;
   }
 
   .about__group {
@@ -16,11 +16,14 @@
   }
 
   .about__para {
-    @apply first-line:text-[14px] leading-[1.4] font-[200] [&>span]:font-[400];
+    @apply text-[14px] leading-[1.4] font-[200] [&>span]:font-[400]
+      md:text-[16px] md:leading-[1.25] lg:text-[18px] lg:leading-[1.33];
   }
 
   .about__tagline {
     @apply flex flex-col w-[180px] text-[14px] leading-[1.4] uppercase
+     md:w-[221px] lg:w-[300px]
+     md:text-[16px] md:leading-[1.25] lg:text-[18px] lg:leading-[1.33]
       [&>span]:flex [&>span:nth-of-type(2)]:ml-auto
        md:mt-auto md:mr-auto lg:col-start-3 lg:row-start-2
        max-md:ml-auto max-md:mt-[30px];
