@@ -67,7 +67,7 @@ export const FeedbackForm = props => {
           <textarea
             className={clsx(
               'feedback__message',
-              email?.message && 'feedback__input--invalid'
+              message?.message && 'feedback__input--invalid'
             )}
             {...register('message', validation.message)}
           />
