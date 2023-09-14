@@ -3,11 +3,17 @@ const PAGE_HEADER_GRADIENT =
   'linear-gradient(180deg, rgba(0 0 0 / 0.7), transparent 40%)';
 
 export const bgi = num => {
-  const str = `${PAGE_HEADER_GRADIENT}, linear-gradient(${SERVICES_OVERLAY}, ${SERVICES_OVERLAY}), url(/services-bg-0${num}.jpg) ${
-    bgi.current ? `,${bgi.current}` : ''
-  }`;
-  bgi.current = `url(/services-bg-0${num}.jpg)`;
-  return str;
+  const url = `url(/services-bg-0${num}.jpg)`;
+  const str = [
+    `${PAGE_HEADER_GRADIENT}`,
+    `linear-gradient(${SERVICES_OVERLAY}, ${SERVICES_OVERLAY})`,
+    url,
+  ];
+  // избежать мерцания при смене на голом фоне страницы
+  if (bgi.currentURL) str.push(bgi.currentURL);
+  bgi.currentURL = url;
+
+  return str.join(',');
 };
 
 export const services = [
