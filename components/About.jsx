@@ -6,7 +6,7 @@ export const About = () => {
       <div className="inner-container">
         <div className="about__content">
           <SectionTitle caption="Who we are" accent={[1, 2]} />
-          {/* <div className="about__details"> */}
+
           <div className="about__group">
             <p className="about__para">
               <span>a team of enthusiasts</span> who are fully committed to the
@@ -23,7 +23,6 @@ export const About = () => {
             </p>
           </div>
 
-          {/* <div className="about__group-sec"> */}
           <div className="about__tagline">
             <span>From vacationers</span>
             <span>to active travelers</span>
@@ -35,8 +34,6 @@ export const About = () => {
             expert guides with in-depth knowledge of the Carpathian landscapes
             lead you safely through the mysteries of these mountains.
           </p>
-          {/* </div> */}
-          {/* </div> */}
         </div>
       </div>
     </section>
