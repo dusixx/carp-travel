@@ -16,9 +16,9 @@ register();
 const params = {
   loop: true,
   speed: 350,
-  keyboard: {
-    enabled: true,
-  },
+  // keyboard: {
+  //   enabled: true,
+  // },
   allowTouchMove: false,
   // navigation: true,
   slidesPerView: 1,
