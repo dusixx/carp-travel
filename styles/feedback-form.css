@@ -1,0 +1,45 @@
+.feedback {
+  @apply flex flex-col gap-[16px] /* mt-[20px]  */
+      md:flex-row md:flex-wrap md:gap-[20px] /* md:mt-[60px] lg:mt-0 */;
+}
+
+.feedback__field {
+  @apply relative flex flex-col gap-[5px] text-inherit 
+      text-[12px] font-[200] leading-[2] tracking-[2.4px];
+}
+
+.feedback__input {
+  @apply h-[24px] p-[8px] bg-button text-inherit outline-none
+      text-[13px] font-[200] leading-[1.85] [&::placeholder]:opacity-40
+      lg:h-[28px] lg:text-[20px] lg:leading-[1.2] 
+      focus-visible:bg-white-10;
+}
+
+.feedback__input--invalid,
+.feedback__message--invalid {
+  @apply text-failed border border-failed;
+}
+
+.feedback__input-error,
+.feedback__message-error {
+  @apply flex items-center justify-end gap-[5px] leading-none
+      text-failed [&>span]:cursor-pointer [&>span]:text-[26px] [&>span]:font-[100];
+}
+
+.feedback__message {
+  @apply feedback__input min-h-[190px] resize-y p-[10px]
+      /* md:w-[460px]  */md:h-[220px];
+}
+
+.feedback__field-group {
+  @apply flex flex-col gap-[16px] md:gap-[7px] 
+      lg:flex-row lg:gap-[20px] lg:w-[100%] lg:[&>label]:flex-1;
+}
+
+.feedback__submit {
+  @apply ml-auto text-[30px] font-[500] uppercase [&>input]:hidden cursor-pointer;
+}
+
+.feedback__group {
+  @apply flex flex-col flex-grow gap-[10px] lg:gap-[20px];
+}
