@@ -24,7 +24,7 @@ export const Services = () => {
     <section
       className="services"
       id="services"
-      style={getServicesBgi(current + 1, BG_PATH)}
+      style={getServicesBgi(`${BG_PATH}/services-bg-${current + 1}.jpg`)}
     >
       <div className="services__container">
         <div className="services__content">

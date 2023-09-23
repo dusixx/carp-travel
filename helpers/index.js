@@ -20,8 +20,8 @@ export const isVScrollBarVisible = () => {
   return res;
 };
 
-export const getServicesBgi = (num, imgDir = '') => {
-  const url = `url(${imgDir}/services-bg-0${num}.jpg)`;
+export const getServicesBgi = bgiUrl => {
+  const url = `url(${bgiUrl})`;
   const str = [
     SERVICES_OVERLAY_GRADIENT,
     `linear-gradient(${SERVICES_OVERLAY_COLOR}, ${SERVICES_OVERLAY_COLOR})`,

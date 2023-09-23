@@ -7,6 +7,7 @@ export const validation = {
       message: 'Invalid name',
     },
   },
+
   email: {
     required: 'Field is required',
     pattern: {
@@ -14,6 +15,7 @@ export const validation = {
       message: 'Invalid email',
     },
   },
+
   message: {
     required: 'Field is required',
     minLength: {
