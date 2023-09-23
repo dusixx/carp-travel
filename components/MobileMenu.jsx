@@ -1,21 +1,18 @@
 import { func } from 'prop-types';
-import { AiOutlineClose as IconClose } from 'react-icons/ai';
-import { BodyScrollLock, NavMenu } from '.';
+import { BodyScrollLock, NavMenu, CloseBtn } from '.';
 
-export const MobileMenu = ({ onItemClick = Function.prototype }) => (
+export const MobileMenu = ({
+  onItemClick = Function.prototype,
+  onCloseClick = Function.prototype,
+}) => (
   <div className="header__mobile-menu">
     <BodyScrollLock />
-    <button
-      className="close-btn"
-      type="button"
-      onClick={() => setShowMenu(false)}
-    >
-      <IconClose size={25} />
-    </button>
+    <CloseBtn onClick={onCloseClick} />
     <NavMenu onItemClick={onItemClick} />
   </div>
 );
 
 MobileMenu.propTypes = {
   onItemClick: func,
+  onCloseClick: func,
 };

@@ -1,12 +1,12 @@
 import { func } from 'prop-types';
 import { IoIosMenu as IconMenu } from 'react-icons/io';
 
-export const MobileMenuBtn = ({ onClick = Function.prototype }) => (
+export const MenuBtn = ({ onClick = Function.prototype }) => (
   <button type="button" onClick={onClick}>
     <IconMenu size={30} />
   </button>
 );
 
-MobileMenuBtn.propTypes = {
+MenuBtn.propTypes = {
   onClick: func,
 };
