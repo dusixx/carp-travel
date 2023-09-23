@@ -1,70 +1,61 @@
-@layer base {
-  body {
-    @apply text-white bg-[#151815];
-  }
-  /* если вне base поставить - 
-  не перебиваются нужные стили, например, в .hero__container */
-  .inner-container {
-    @apply w-[100%] max-w-[1280px] max-md:px-[20px]
-      px-[30px] py-[70px] pb-[60px] 
-      md:py-[80px] md:pb-[70px]
-      lg:py-[120px] lg:pb-[100px]
-      my-0 mx-auto relative;
-  }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: theme(fontFamily[inter]);
 
-  .cornered {
-    background: linear-gradient(to right, white 1px, transparent 1px) 0 0,
-      linear-gradient(to right, white 1px, transparent 1px) 0 100%,
-      linear-gradient(to left, white 1px, transparent 1px) 100% 0,
-      linear-gradient(to left, white 1px, transparent 1px) 100% 100%,
-      linear-gradient(to bottom, white 1px, transparent 1px) 0 0,
-      linear-gradient(to bottom, white 1px, transparent 1px) 100% 0,
-      linear-gradient(to top, white 1px, transparent 1px) 0 100%,
-      linear-gradient(to top, white 1px, transparent 1px) 100% 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply text-textMain bg-[#151815];
+}
 
-    background-repeat: no-repeat;
-    background-size: 2rem 0.5rem;
-  }
+a {
+  @apply hover:underline;
+}
 
-  .button-primary {
-    @apply cornered flex flex-grow-0 justify-center w-[100%] items-center py-[16px] uppercase cursor-pointer 
-    text-white bg-button hover:bg-buttonHover
-      text-[18px] font-[700] font-[inherit] leading-[1] lg:text-[32px];
-  }
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-  .page-title {
-    @apply flex flex-col h-max ml-auto text-[37px] font-thin
-        tracking-[1.66px] uppercase leading-none
-        md:row-start-1 md:col-start-2
-        md:text-[67px] md:tracking-[8.71px] md:w-[230px]
-        lg:text-[98px] lg:tracking-normal lg:w-[305px];
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  .page-bg {
-    @apply bg-cover bg-center bg-fixed;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 
-  .page-title__accent {
-    @apply font-medium;
-  }
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .page-title__subtitle {
-    @apply text-[12px] font-light tracking-[9.48px]
-      md:text-[14px] md:tracking-[25.9px]
-      lg:text-[16px] lg:tracking-[36.48px];
-  }
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-  .section-title {
-    @apply flex flex-wrap text-[40px] font-thin leading-[1.3] tracking-[-1.6px] uppercase
-      md:text-[67px] md:tracking-[-2.68px] md:leading-[1.2] 
-      lg:text-[98px] lg:tracking-[-3.92px];
-  }
+a {
+  text-decoration: none;
+}
 
-  .section-title__accent {
-    @apply font-medium;
-  }
-
-  a {
-    @apply hover:underline;
-  }
+button {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

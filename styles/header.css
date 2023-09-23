@@ -1,55 +1,53 @@
-@layer components {
-  .header {
-    @apply fixed top-0 left-0 w-[100%] z-[999] flex;
-  }
+.header {
+  @apply fixed top-0 left-0 w-[100%] z-[999] flex;
+}
 
-  .header__container {
-    @apply inner-container py-0 flex justify-between items-center;
-  }
+.header__container {
+  @apply inner-container py-0 flex justify-between items-center;
+}
 
-  .header--shaded {
-    @apply bg-shaded backdrop-blur-[4px] border-b border-button;
-  }
+.header--shaded {
+  @apply bg-shaded backdrop-blur-[4px] border-b border-button;
+}
 
-  .header--shaded .menu-item__btn {
-    @apply py-0;
-  }
+.header--shaded .menu-item__btn {
+  @apply py-0;
+}
 
-  .header--shaded .logo {
-    @apply w-[60px] py-[7px];
-  }
+.header--shaded .logo {
+  @apply w-[60px] py-[7px];
+}
 
-  .logo {
-    @apply w-[70px] py-[25px];
-  }
+.logo {
+  @apply w-[70px] py-[25px];
+}
 
-  .header__nav-links .menu-list {
-    @apply flex gap-[56px];
-  }
+.header__nav-links .menu-list {
+  @apply flex gap-[56px];
+}
 
-  .menu-list {
-    @apply flex h-[100%] items-center justify-center;
-  }
+.menu-list {
+  @apply flex h-[100%] items-center justify-center;
+}
 
-  .menu-item__btn {
-    @apply text-[14px] capitalize tracking-[1.4px] py-[34px] 
+.menu-item__btn {
+  @apply text-[14px] capitalize tracking-[1.4px] py-[34px] 
       hover:underline focus-visible:underline;
-  }
+}
 
-  .header__mobile-menu {
-    @apply fixed top-0 left-0 w-[100%] h-[100%]  p-[20px] z-[999] 
+.header__mobile-menu {
+  @apply fixed top-0 left-0 w-[100%] h-[100%]  p-[20px] z-[999] 
        flex-col justify-center items-center bg-shaded backdrop-blur-[4px];
-  }
+}
 
-  .header__mobile-menu .menu-list {
-    @apply flex-col items-center text-center my-auto;
-  }
+.header__mobile-menu .menu-list {
+  @apply flex-col items-center text-center my-auto;
+}
 
-  .header__mobile-menu .menu-item__btn {
-    @apply text-[18px] tracking-[1.8px];
-  }
+.header__mobile-menu .menu-item__btn {
+  @apply text-[18px] tracking-[1.8px];
+}
 
-  .header__mobile-menu .close-btn {
-    @apply flex ml-auto;
-  }
+.header__mobile-menu .close-btn {
+  @apply flex ml-auto;
 }

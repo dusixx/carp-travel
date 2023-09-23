@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
 import { func } from 'prop-types';
-import { scrollToTarget } from '@/helpers';
+import { scrollToTarget } from '../helpers';
 
 const menuItems = {
   about: '#about',
@@ -9,7 +8,7 @@ const menuItems = {
   contacts: '#contacts',
 };
 
-export const NavMenu = ({ onItemClick }) => {
+export const NavMenu = ({ onItemClick = Function.prototype }) => {
   return (
     <ul className="menu-list">
       {Object.entries(menuItems).map(([name, target]) => (
@@ -18,7 +17,7 @@ export const NavMenu = ({ onItemClick }) => {
             className="menu-item__btn"
             type="button"
             onClick={e => {
-              onItemClick?.call(e);
+              onItemClick(e);
               setTimeout(() => scrollToTarget(target), 0);
             }}
           >

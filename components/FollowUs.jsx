@@ -1,9 +1,9 @@
-/* eslint-disable react/jsx-key */
 import { ContactItem } from './ContactItem';
 
 const list = ['facebook', 'instagram', 'youtube', 'tiktok'];
 const socials = list.map(name => (
   <a
+    key={name}
     className="link"
     href={`https://${name}.com`}
     rel="noreferrer noopener nofollow"

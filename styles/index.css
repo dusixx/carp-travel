@@ -1,7 +1,13 @@
+@import 'tailwindcss/base';
+@import './base.css';
+
+@import 'tailwindcss/components';
+@import './common.css';
+@import './header.css';
 @import './hero.css';
+@import './about.css';
+@import './services.css';
 @import './gallery.css';
 @import './contacts.css';
-@import './services.css';
-@import './about.css';
-@import './header.css';
-@import './base.css';
+
+@import 'tailwindcss/utilities';

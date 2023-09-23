@@ -1,3 +1,7 @@
+const SERVICES_OVERLAY_COLOR = 'rgba(2 15 8 / 0.5)';
+const SERVICES_OVERLAY_GRADIENT =
+  'linear-gradient(180deg, rgba(0 0 0 / 0.7), transparent 40%)';
+
 export const scrollToTarget = selector => {
   document
     .querySelector(String(selector))
@@ -14,4 +18,18 @@ export const isVScrollBarVisible = () => {
   body.style.overflow = curBodyOverflow;
 
   return res;
+};
+
+export const getServicesBgi = (num, imgDir = '') => {
+  const url = `url(${imgDir}/services-bg-0${num}.jpg)`;
+  const str = [
+    SERVICES_OVERLAY_GRADIENT,
+    `linear-gradient(${SERVICES_OVERLAY_COLOR}, ${SERVICES_OVERLAY_COLOR})`,
+    url,
+  ];
+  // избежать мерцания при смене на голом фоне страницы
+  if (getServicesBgi.currentURL) str.push(getServicesBgi.currentURL);
+  getServicesBgi.currentURL = url;
+
+  return { backgroundImage: str.join(',') };
 };

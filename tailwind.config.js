@@ -7,7 +7,7 @@ const SERVICES_OVERLAY = 'rgba(2 15 8 / 0.5)';
 const PAGE_HEADER_GRADIENT_30 =
   'linear-gradient(180deg, rgba(0 24 38 / 1), transparent 30%)';
 
-const PAGE_HEADER_GRADIENT_SEC =
+export const PAGE_HEADER_GRADIENT_SEC =
   'linear-gradient(180deg, rgba(0 0 0 / 0.6), transparent 30%)';
 
 module.exports = {
@@ -27,6 +27,7 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
       },
       colors: {
+        textMain: 'white',
         heroOverlay: HERO_OVERLAY,
         shaded: 'rgba(5 25 30 / 0.9)',
         failed: '#FF5757',
