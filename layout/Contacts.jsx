@@ -16,26 +16,36 @@ export const Contacts = () => {
     <section className="contacts" id="contacts">
       <div className="contacts__container">
         <SectionTitle caption="Contact us" accent={1} />
-
         <div className="contacts__wrapper">
           <div className="contacts__info">
             <div className="contacts__group">
+              {/* phone */}
               <ContactItem
                 label="Phone number"
                 value={tel.map(itm => (
-                  <a key={itm} href={`tel:${itm.replace(/[^\d]/g, '')}`}>
+                  <a
+                    key={itm}
+                    href={`tel:${itm.replace(/[^\d]/g, '')}`}
+                    aria-label="Contact phone"
+                  >
                     {itm}
                   </a>
                 ))}
               />
+              {/* email */}
               <ContactItem
                 label="E-mail"
-                value={<a href={`mailto:${email}`}>{email}</a>}
+                value={
+                  <a href={`mailto:${email}`} aria-label="Contact email">
+                    {email}
+                  </a>
+                }
               />
             </div>
+            {/* socials */}
             <FollowUs className="contacts__follow-us" />
           </div>
-
+          {/* feedback */}
           <FeedbackForm className="feedback" />
         </div>
       </div>

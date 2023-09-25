@@ -10,7 +10,7 @@ const PAGE_HEADER_GRADIENT_30 =
 export const PAGE_HEADER_GRADIENT_SEC =
   'linear-gradient(180deg, rgba(0 0 0 / 0.6), transparent 30%)';
 
-module.exports = {
+const config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -46,3 +46,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+export default config;

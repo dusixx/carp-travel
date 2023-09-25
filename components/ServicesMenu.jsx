@@ -1,14 +1,14 @@
 import clsx from 'clsx';
-import { func, string, array } from 'prop-types';
+import { func, string, array, number } from 'prop-types';
 
 export const ServicesMenu = ({
   parentClass,
   items,
   current,
+  tagline = '',
   onClick = Function.prototype,
 }) => {
   const menu = `${parentClass}__menu`;
-
   const className = {
     menu,
     menuItem: `${menu}-item`,
@@ -26,7 +26,10 @@ export const ServicesMenu = ({
           )}
           onClick={() => onClick(idx)}
         >
-          {name}
+          <div data-content>
+            <span data-name>{name}</span>
+            {idx === current && <span data-tagline>{tagline}</span>}
+          </div>
         </li>
       ))}
     </ul>
@@ -37,4 +40,6 @@ ServicesMenu.propTypes = {
   parentClass: string,
   items: array,
   onClick: func,
+  current: number,
+  tagline: string,
 };

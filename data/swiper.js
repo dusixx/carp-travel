@@ -1,3 +1,7 @@
+import config from '../tailwind.config';
+
+const tablet = parseInt(config.theme.screens.md);
+
 export const swiperConfig = {
   services: {
     loop: true,
@@ -17,7 +21,7 @@ export const swiperConfig = {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 80,
     navigation: {
       nextEl: `.${parentClass}__swiper-next`,
       prevEl: `.${parentClass}__swiper-prev`,
@@ -26,8 +30,8 @@ export const swiperConfig = {
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
-      depth: 0,
-      modifier: 2.5,
+      depth: 100,
+      modifier: 1,
       slideShadows: false,
     },
     on: {
@@ -37,7 +41,7 @@ export const swiperConfig = {
       },
     },
     breakpoints: {
-      768: {
+      [tablet]: {
         direction: 'horizontal',
         /* слайдов должно быть минимум вдвое больше */
         slidesPerView: 2,

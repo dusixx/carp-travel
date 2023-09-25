@@ -5,6 +5,7 @@ const socials = list.map(name => (
   <a
     key={name}
     className="link"
+    aria-label={`${name} link`}
     href={`https://${name}.com`}
     rel="noreferrer noopener nofollow"
     target="_blank"
@@ -13,8 +14,6 @@ const socials = list.map(name => (
   </a>
 ));
 
-export const FollowUs = ({ className }) => {
-  return (
-    <ContactItem className={className} label="Follow us" value={socials} />
-  );
-};
+export const FollowUs = ({ className }) => (
+  <ContactItem className={className} label="Follow us" value={socials} />
+);

@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
+import Image from 'next/image';
 import { useRef, useEffect, useState, forwardRef } from 'react';
 import { register } from 'swiper/element/bundle';
 
@@ -28,11 +29,13 @@ export const Swiper = forwardRef(
         {items?.map(({ img, name }) => (
           <swiper-slide key={name} class={className.slide}>
             {/* NOTE: при попытке использовать Image - ошибка в register() */}
-            <img
+            <Image
               className={className.img}
               src={`${imgDir}/${img}`}
               alt={`${name}`}
-              loading="lazy"
+              width={1000}
+              height={1000}
+              // loading="lazy"
             />
           </swiper-slide>
         ))}
