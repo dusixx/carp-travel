@@ -10,12 +10,9 @@ const BG_PATH = '/services/bg';
 export const Services = () => {
   const swiperRef = useRef(null);
   const [current, setCurrent] = useState(0);
-  // const [taglinePt, setTaglinePt] = useState(0);
 
   const handleMenuItemClick = (idx, height, offsetTop) => {
     const swiper = swiperRef.current?.swiper;
-    // console.log(idx, height, offsetTop);
-    // setTaglinePt(idx * (16 + height / 2));
     setCurrent(idx);
     swiper?.slideToLoop?.(idx);
   };
@@ -44,12 +41,7 @@ export const Services = () => {
           />
 
           <div className="services__desc">
-            <span
-              className="services__tagline"
-              // style={{ paddingTop: taglinePt }}
-            >
-              {tagline}
-            </span>
+            <span className="services__tagline">{tagline}</span>
             <ServicesMenu
               parentClass="services"
               items={items}

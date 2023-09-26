@@ -37,7 +37,7 @@
   @apply lowercase font-[200] tracking-[-0.2px] md:tracking-[0.7px] whitespace-nowrap;
 }
 
-.about__para.we-use {
+.about__para--our-methods {
   @apply md:w-[463px] md:ml-auto lg:ml-auto lg:row-start-2 lg:col-end-2 lg:mt-auto
     md:col-start-1 md:col-end-3 max-md:mt-[30px];
 }

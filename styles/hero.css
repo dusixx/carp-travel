@@ -12,8 +12,8 @@
       md:min-h-[345px] lg:min-h-[560px];
 }
 
-.hero__section-title {
-  @apply section-title mb-auto md:row-start-1 row-end-[span_2] col-start-1;
+.hero .section-title {
+  @apply mb-auto md:row-start-1 row-end-[span_2] col-start-1;
 }
 
 .hero__join-now {

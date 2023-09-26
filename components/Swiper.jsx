@@ -12,7 +12,7 @@ export const Swiper = forwardRef(
   ({ parentClass, config, data: { items, imgDir } }, ref) => {
     const swiper = `${parentClass}__swiper`;
 
-    const className = {
+    const cls = {
       swiper,
       slide: `${swiper}-slide`,
       img: `${swiper}-img`,
@@ -25,12 +25,12 @@ export const Swiper = forwardRef(
     }, [config, ref]);
 
     return (
-      <swiper-container ref={ref} class={className.swiper} init="false">
+      <swiper-container ref={ref} class={cls.swiper} init="false">
         {items?.map(({ img, name }) => (
-          <swiper-slide key={name} class={className.slide}>
+          <swiper-slide key={name} class={cls.slide}>
             {/* NOTE: при попытке использовать Image - ошибка в register() */}
             <Image
-              className={className.img}
+              className={cls.img}
               src={`${imgDir}/${img}`}
               alt={`${name}`}
               width={1000}

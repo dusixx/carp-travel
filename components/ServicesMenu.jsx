@@ -9,29 +9,31 @@ export const ServicesMenu = ({
   onClick = Function.prototype,
 }) => {
   const menu = `${parentClass}__menu`;
-  const className = {
+  const cls = {
     menu,
     menuItem: `${menu}-item`,
     menuItemCurrent: `${menu}-item--current`,
   };
 
   return (
-    <ul className={className.menu}>
-      {items.map(({ name }, idx) => (
-        <li
-          key={name}
-          className={clsx(
-            className.menuItem,
-            idx === current && className.menuItemCurrent
-          )}
-          onClick={() => onClick(idx)}
-        >
-          <div data-content>
-            <span data-name>{name}</span>
-            {idx === current && <span data-tagline>{tagline}</span>}
-          </div>
-        </li>
-      ))}
+    <ul className={cls.menu}>
+      {items.map(({ name }, idx) => {
+        const isCurrent = idx === current;
+
+        return (
+          <li
+            key={name}
+            className={clsx(cls.menuItem, isCurrent && cls.menuItemCurrent)}
+          >
+            <div data-content>
+              <span data-name onClick={() => onClick(idx)}>
+                {name}
+              </span>
+              {isCurrent && <span data-tagline>{tagline}</span>}
+            </div>
+          </li>
+        );
+      })}
     </ul>
   );
 };

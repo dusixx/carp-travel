@@ -17,7 +17,7 @@ export const About = () => {
 
           <AboutTagline />
 
-          <p className="about__para we-use">{ourMethods}</p>
+          <p className="about__para about__para--our-methods">{ourMethods}</p>
         </div>
       </div>
     </section>

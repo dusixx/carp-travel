@@ -6,8 +6,8 @@
   @apply inner-container;
 }
 
-.gallery__section-title {
-  @apply section-title max-lg:justify-center;
+.gallery .section-title {
+  @apply max-lg:justify-center;
 }
 
 .gallery__swiper {

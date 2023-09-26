@@ -1,12 +1,14 @@
-export const SectionTitle = ({ caption, accent, className }) => {
+import clsx from 'clsx';
+
+export const SectionTitle = ({ caption, accent }) => {
   const accentList = Array.isArray(accent) ? accent : [accent];
 
   return (
-    <h2 className={className ?? 'section-title'}>
+    <h2 className="section-title">
       {caption?.split(/\s+/).map((word, idx) => (
         <span
           key={idx}
-          className={accentList.includes(idx) ? 'section-title__accent' : null}
+          className={clsx(accentList.includes(idx) && 'section-title__accent')}
         >
           {word}&nbsp;
         </span>

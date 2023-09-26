@@ -13,7 +13,6 @@ export const Hero = () => {
           <PageTitle />
 
           <SectionTitle
-            className="hero__section-title"
             caption="Uncover Carpathian&rsquo;s Secrets"
             accent={0}
           />

@@ -10,11 +10,7 @@ export const Gallery = () => {
   return (
     <section className="gallery" id="gallery">
       <div className="gallery__container">
-        <SectionTitle
-          className="gallery__section-title"
-          caption="Our gallery"
-          accent={1}
-        />
+        <SectionTitle caption="Our gallery" accent={1} />
 
         <div className="gallery__wrapper">
           <Swiper
