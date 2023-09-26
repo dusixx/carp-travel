@@ -4,11 +4,11 @@ import { navItems } from '@/data';
 
 export const NavMenu = ({ onItemClick = Function.prototype }) => {
   return (
-    <ul className="menu-list">
+    <ul className="nav-menu">
       {Object.entries(navItems).map(([name, target]) => (
-        <li key={name}>
+        <li key={name} className="nav-menu__item">
           <button
-            className="menu-item__btn"
+            className="nav-menu__btn"
             type="button"
             onClick={e => {
               onItemClick(e);

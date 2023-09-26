@@ -89,4 +89,12 @@
   .logo {
     @apply transition-opacity hover:opacity-50 focus-visible:opacity-50;
   }
+
+  .nav-menu {
+    @apply flex h-[100%] items-center justify-center;
+  }
+
+  .nav-menu__btn {
+    @apply button-base text-[14px] capitalize tracking-[1.4px] py-[34px];
+  }
 }

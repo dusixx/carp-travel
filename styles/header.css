@@ -7,10 +7,11 @@
 }
 
 .header--shaded {
-  @apply bg-shaded backdrop-blur-[4px] border-b border-button;
+  @apply bg-shaded backdrop-blur-[4px] border-b border-button 
+    transition-[background-color];
 }
 
-.header--shaded .menu-item__btn {
+.header--shaded .nav-menu__btn {
   @apply py-0;
 }
 
@@ -22,31 +23,6 @@
   @apply w-[60px] py-[7px];
 }
 
-.header__nav-links .menu-list {
+.header__nav-links .nav-menu {
   @apply flex gap-[56px];
-}
-
-.menu-list {
-  @apply flex h-[100%] items-center justify-center;
-}
-
-.menu-item__btn {
-  @apply button-base text-[14px] capitalize tracking-[1.4px] py-[34px];
-}
-
-.header__mobile-menu {
-  @apply fixed top-0 left-0 w-[100%] h-[100%]  p-[20px] z-[999] 
-       flex-col justify-center items-center bg-shaded backdrop-blur-[4px];
-}
-
-.header__mobile-menu .menu-list {
-  @apply flex-col items-center text-center my-auto;
-}
-
-.header__mobile-menu .menu-item__btn {
-  @apply text-[18px] tracking-[1.8px];
-}
-
-.header__mobile-menu .close-btn {
-  @apply ml-auto;
 }

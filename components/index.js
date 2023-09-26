@@ -8,7 +8,6 @@ export * from './AboutTagline';
 export * from './Logo';
 export * from './CloseBtn';
 export * from './MobileMenu';
-export * from './Nav';
 export * from './MenuBtn';
 export * from './JoinNowBtn';
 export * from './Swiper';

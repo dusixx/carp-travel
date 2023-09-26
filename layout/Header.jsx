@@ -3,7 +3,13 @@
 import clsx from 'clsx';
 import { useHeaderMatchMedia } from '@/hooks';
 
-import { BodyScrollLock, Logo, MobileMenu, Nav, MenuBtn } from '@/components';
+import {
+  BodyScrollLock,
+  Logo,
+  MobileMenu,
+  NavMenu,
+  MenuBtn,
+} from '@/components';
 
 export const Header = () => {
   const { headerRef, showMenu, setShowMenu, shaded, showNav } =
@@ -17,7 +23,13 @@ export const Header = () => {
       >
         <div className="header__container">
           <Logo />
-          {showNav ? <Nav /> : <MenuBtn onClick={() => setShowMenu(true)} />}
+          {showNav ? (
+            <nav className="header__nav-links">
+              <NavMenu />
+            </nav>
+          ) : (
+            <MenuBtn onClick={() => setShowMenu(true)} />
+          )}
         </div>
       </header>
       {showMenu && (

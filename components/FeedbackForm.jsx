@@ -2,10 +2,12 @@
 
 import clsx from 'clsx';
 import { useForm } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 import { toast } from 'react-toastify';
 import { validation } from '@/data';
 import { FormField } from './FormField';
 
+const LS_KEY_FEEDBACK = 'feedback-form';
 const MSG_SUBMIT_SUCCESS = 'The data has been sent. We will contact you';
 
 export const FeedbackForm = props => {
@@ -15,7 +17,15 @@ export const FeedbackForm = props => {
     formState: { errors },
     reset,
     setError,
+    watch,
+    setValue,
   } = useForm();
+
+  useFormPersist(LS_KEY_FEEDBACK, {
+    watch,
+    setValue,
+    storage: window.localStorage,
+  });
 
   const handleFormSubmit = handleSubmit(data => {
     toast.success(MSG_SUBMIT_SUCCESS);

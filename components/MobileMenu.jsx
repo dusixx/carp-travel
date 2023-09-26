@@ -5,7 +5,7 @@ export const MobileMenu = ({
   onItemClick = Function.prototype,
   onCloseClick = Function.prototype,
 }) => (
-  <div className="header__mobile-menu">
+  <div className="mobile-menu">
     <BodyScrollLock />
     <CloseBtn onClick={onCloseClick} title="Close" aria-label="Menu close" />
     <NavMenu onItemClick={onItemClick} />
