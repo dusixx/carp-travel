@@ -1,8 +1,8 @@
 'use client';
 
 import { useRef } from 'react';
-import { SectionTitle, Swiper, SwiperControls } from '@/components';
 import { galleryData, swiperConfig as config } from '@/data';
+import { SectionTitle, Swiper, SwiperControls } from '@/components';
 
 export const Gallery = () => {
   const swiperRef = useRef(null);

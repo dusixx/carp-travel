@@ -9,6 +9,7 @@ import { FormField } from './FormField';
 
 const LS_KEY_FEEDBACK = 'feedback-form';
 const MSG_SUBMIT_SUCCESS = 'The data has been sent. We will contact you';
+const storage = globalThis.localStorage;
 
 export const FeedbackForm = props => {
   const {
@@ -24,7 +25,7 @@ export const FeedbackForm = props => {
   useFormPersist(LS_KEY_FEEDBACK, {
     watch,
     setValue,
-    storage: globalThis.localStorage,
+    storage,
   });
 
   const handleFormSubmit = handleSubmit(data => {

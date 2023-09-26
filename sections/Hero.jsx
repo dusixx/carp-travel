@@ -1,7 +1,7 @@
 'use client';
 
-import { PageTitle, SectionTitle, JoinNowBtn } from '@/components';
 import { heroData } from '@/data';
+import { PageTitle, SectionTitle, JoinNowBtn } from '@/components';
 
 const { bgPhotoCaption, weOffer } = heroData;
 

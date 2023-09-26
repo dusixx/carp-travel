@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ToastContainer } from 'react-toastify';
-import { Hero, Gallery, Contacts, Services, About } from '@/layout';
+import { Hero, Gallery, Contacts, Services, About } from '@/sections';
 
 export default function Home() {
   return (
