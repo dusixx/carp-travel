@@ -24,6 +24,7 @@ export const Contacts = () => {
                 label="Phone number"
                 value={tel.map(itm => (
                   <a
+                    className="link-base"
                     key={itm}
                     href={`tel:${itm.replace(/[^\d]/g, '')}`}
                     aria-label="Contact phone"
@@ -36,7 +37,11 @@ export const Contacts = () => {
               <ContactItem
                 label="E-mail"
                 value={
-                  <a href={`mailto:${email}`} aria-label="Contact email">
+                  <a
+                    className="link-base"
+                    href={`mailto:${email}`}
+                    aria-label="Contact email"
+                  >
                     {email}
                   </a>
                 }

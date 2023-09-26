@@ -54,7 +54,6 @@ export const FeedbackForm = props => {
         <FormField
           formClass="feedback"
           multiline={true}
-          inputElName="message"
           name="message"
           caption="Message"
           onClearError={() => setError('message', null)}

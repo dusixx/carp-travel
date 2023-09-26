@@ -2,11 +2,11 @@
 
 import clsx from 'clsx';
 import { string, func, object, bool } from 'prop-types';
+import { CloseBtn } from './CloseBtn';
 
 export const FormField = ({
   formClass,
   name,
-  inputElName = 'input',
   placeholder,
   caption,
   errors,
@@ -15,35 +15,38 @@ export const FormField = ({
   register = Function.prototype,
   validation,
 }) => {
-  const input = `${formClass}__${inputElName}`;
-
-  const className = {
+  const input = `${formClass}__input`;
+  const cls = {
     input,
     field: `${formClass}__field`,
     inputInvalid: `${input}--invalid`,
     inputError: `${input}-error`,
   };
 
-  const errorMessage = errors[name]?.message;
+  const errorMessage = errors?.[name]?.message;
 
   const inputProps = {
     placeholder,
-    className: clsx(className.input, errorMessage && className.inputInvalid),
-    ...register(name, validation[name]),
+    className: clsx(cls.input, errorMessage && cls.inputInvalid),
+    ...(register && register(name, validation?.[name])),
   };
 
   return (
-    <label className={className.field}>
+    <label className={cls.field}>
       <span>{caption}</span>
       {multiline ? <textarea {...inputProps} /> : <input {...inputProps} />}
-      <span className={className.inputError}>
-        {errorMessage && (
-          <>
-            <span onClick={onClearError}>&times;</span>
-            {errorMessage}
-          </>
-        )}
-      </span>
+      {errorMessage && (
+        <span className={cls.inputError}>
+          <CloseBtn
+            className={`${cls.inputError}-clear`}
+            onClick={onClearError}
+            aria-label="Clear error"
+            title="Clear error"
+            size={16}
+          />
+          {errorMessage}
+        </span>
+      )}
     </label>
   );
 };

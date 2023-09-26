@@ -54,7 +54,12 @@
 }
 
 .services__menu-item {
-  @apply flex items-center w-[100%];
+  @apply flex items-center w-[100%] text-white-50
+      transition-colors hover:text-white focus-visible:text-white;
+}
+
+.services__menu-item--current {
+  @apply text-white;
 }
 
 .services__menu-item div[data-content] {
@@ -66,8 +71,7 @@
 }
 
 .services__menu-item--current span[data-name] {
-  @apply font-bold 
-    before:content-['\0025C6\0000a0\0000a0'] before:text-[20px];
+  @apply font-bold before:content-['\0025C6\0000a0\0000a0'] before:text-[20px];
 }
 
 .services__menu-item span[data-tagline] {

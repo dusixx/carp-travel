@@ -8,10 +8,6 @@ body {
   @apply text-textMain bg-[#151815];
 }
 
-a {
-  @apply hover:underline;
-}
-
 *,
 ::before,
 ::after {

@@ -17,6 +17,10 @@ const config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    transitionDuration: {
+      DEFAULT: '250ms',
+      150: '150ms',
+    },
     screens: {
       sm: '320px',
       md: '768px',
@@ -31,7 +35,12 @@ const config = {
         heroOverlay: HERO_OVERLAY,
         shaded: 'rgba(5 25 30 / 0.9)',
         failed: '#FF5757',
-        'white-10': 'rgba(255 255 255 / 0.1)',
+        white: {
+          DEFAULT: 'white',
+          10: 'rgba(255 255 255 / 0.1)',
+          20: 'rgba(255 255 255 / 0.2)',
+          50: 'rgba(255 255 255 / 0.5)',
+        },
         button: 'rgba(255 255 255 / 0.05)',
         buttonState2: 'rgba(255 255 255 / 0.1)',
         buttonHover: 'rgba(255 255 255 / 0.2)',

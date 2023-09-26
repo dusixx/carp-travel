@@ -14,12 +14,12 @@
   @apply py-0;
 }
 
-.header--shaded .logo {
-  @apply w-[60px] py-[7px];
+.header .logo {
+  @apply w-[70px] py-[25px];
 }
 
-.logo {
-  @apply w-[70px] py-[25px];
+.header--shaded .logo {
+  @apply w-[60px] py-[7px];
 }
 
 .header__nav-links .menu-list {
@@ -31,8 +31,7 @@
 }
 
 .menu-item__btn {
-  @apply text-[14px] capitalize tracking-[1.4px] py-[34px] 
-      hover:underline focus-visible:underline;
+  @apply button-base text-[14px] capitalize tracking-[1.4px] py-[34px];
 }
 
 .header__mobile-menu {
@@ -49,5 +48,5 @@
 }
 
 .header__mobile-menu .close-btn {
-  @apply flex ml-auto;
+  @apply ml-auto;
 }

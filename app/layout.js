@@ -13,6 +13,9 @@ export const metadata = {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
   },
+  // others: {
+  //   'next-size-adjust': 'sss',
+  // },
 };
 
 export default function RootLayout({ children }) {

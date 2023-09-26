@@ -7,7 +7,7 @@ export const MobileMenu = ({
 }) => (
   <div className="header__mobile-menu">
     <BodyScrollLock />
-    <CloseBtn onClick={onCloseClick} />
+    <CloseBtn onClick={onCloseClick} title="Close" aria-label="Menu close" />
     <NavMenu onItemClick={onItemClick} />
   </div>
 );
