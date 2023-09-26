@@ -33,13 +33,12 @@ textarea + .feedback__input-error {
 }
 
 .feedback__input-error-clear {
-  @apply button-base text-[26px] font-[100] 
-      transition-transform hover:scale-110 focus-visible:scale-110;
+  @apply button-base transition-transform;
 }
 
 .feedback__input-error-clear:hover,
 .feedback__input-error-clear:focus-visible {
-  @apply scale-110 text-failed;
+  @apply scale-125 text-failed;
 }
 
 textarea.feedback__input {

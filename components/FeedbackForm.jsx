@@ -24,7 +24,7 @@ export const FeedbackForm = props => {
   useFormPersist(LS_KEY_FEEDBACK, {
     watch,
     setValue,
-    storage: window.localStorage,
+    storage: globalThis.localStorage,
   });
 
   const handleFormSubmit = handleSubmit(data => {
