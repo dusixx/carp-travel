@@ -77,7 +77,7 @@
   }
 
   .link-base {
-    @apply relative flex flex-wrap items-center justify-center h-max w-max;
+    @apply relative inline-flex flex-wrap items-center justify-center h-max w-max;
   }
 
   .link-base::after {

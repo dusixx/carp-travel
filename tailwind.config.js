@@ -23,6 +23,7 @@ const config = {
     },
     screens: {
       sm: '320px',
+      xs: '475px',
       md: '768px',
       lg: '1280px',
     },

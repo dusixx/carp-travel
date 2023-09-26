@@ -25,7 +25,7 @@ export const ServicesMenu = ({
             key={name}
             className={clsx(cls.menuItem, isCurrent && cls.menuItemCurrent)}
           >
-            <div data-content>
+            <div data-caption>
               <span data-name onClick={() => onClick(idx)}>
                 {name}
               </span>

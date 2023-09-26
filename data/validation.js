@@ -1,4 +1,3 @@
-// минимальная валидация для примера
 export const validation = {
   fullName: {
     required: 'Field is required',
