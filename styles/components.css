@@ -21,12 +21,9 @@
     background-size: 2rem 0.5rem;
   }
 
-  .transition-base {
-    @apply transition-colors hover:text-white-50 focus-visible:text-white-50;
-  }
-
   .button-base {
-    @apply flex justify-center items-center p-0 transition-base;
+    @apply flex justify-center items-center p-0 
+      transition-colors hover:text-white-50 focus-visible:text-white-50;
   }
 
   .button-primary {

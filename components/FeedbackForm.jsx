@@ -2,12 +2,13 @@
 
 import clsx from 'clsx';
 import { toast } from 'react-toastify';
-import { validation } from '@/data';
+import { validation, placeholder } from '@/data';
 import { useForm } from '@/hooks';
 import { FormField } from './FormField';
 
 const storageKey = 'feedback-form';
 const MSG_SUBMIT_SUCCESS = 'The data has been sent. We will contact you';
+const { fullName, email, message } = placeholder;
 
 export const FeedbackForm = props => {
   const {
@@ -38,7 +39,7 @@ export const FeedbackForm = props => {
     >
       <div className="form-field-group">
         <FormField
-          placeholder="John Smith"
+          placeholder={fullName}
           name="fullName"
           caption="Full name"
           onClearError={() => setError('fullName', null)}
@@ -46,7 +47,7 @@ export const FeedbackForm = props => {
         />
 
         <FormField
-          placeholder="johnsmith@email.com"
+          placeholder={email}
           name="email"
           caption="E-mail"
           onClearError={() => setError('email', null)}
@@ -59,6 +60,7 @@ export const FeedbackForm = props => {
           multiline={true}
           name="message"
           caption="Message"
+          placeholder={message}
           onClearError={() => setError('message', null)}
           {...regProps}
         />

@@ -2,13 +2,14 @@
 
 import clsx from 'clsx';
 import { toast } from 'react-toastify';
-import { validation } from '@/data';
+import { validation, placeholder } from '@/data';
 import { useForm } from '@/hooks';
 import { FormField } from './FormField';
 import { Checkbox } from './Checkbox';
 
 const storageKey = 'join-us-form';
 const MSG_SUBMIT_SUCCESS = 'The data has been sent. We will contact you';
+const { fullName, email, position, phone, message } = placeholder;
 
 export const JoinUsForm = props => {
   const {
@@ -44,7 +45,7 @@ export const JoinUsForm = props => {
           <FormField
             name="fullName"
             caption="Full name"
-            placeholder="John Smith"
+            placeholder={fullName}
             onClearError={() => setError('fullName', null)}
             {...regProps}
           />
@@ -52,7 +53,7 @@ export const JoinUsForm = props => {
           <FormField
             name="email"
             caption="E-mail"
-            placeholder="johnsmith@email.com"
+            placeholder={email}
             onClearError={() => setError('email', null)}
             {...regProps}
           />
@@ -60,7 +61,7 @@ export const JoinUsForm = props => {
           <FormField
             name="position"
             caption="Position"
-            placeholder="Movie maker"
+            placeholder={position}
             onClearError={() => setError('position', null)}
             {...regProps}
           />
@@ -68,14 +69,19 @@ export const JoinUsForm = props => {
           <FormField
             name="phone"
             caption="Phone"
-            placeholder="(097) 12 34 567"
+            placeholder={phone}
             inputWrapper={true}
             onClearError={() => setError('phone', null)}
             {...regProps}
           />
         </div>
 
-        <FormField multiline={true} name="message" caption="Message" />
+        <FormField
+          multiline={true}
+          name="message"
+          caption="Message"
+          placeholder={message}
+        />
       </div>
 
       <div className="form-group">

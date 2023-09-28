@@ -7,3 +7,4 @@ export * from './gallery.js';
 export * from './contacts.js';
 export * from './header.js';
 export * from './career.js';
+export * from './placeholder.js';
