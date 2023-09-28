@@ -1,7 +1,10 @@
 import config from '../tailwind.config';
 
-const tablet = parseInt(config.theme.screens.md);
-const desktop = parseInt(config.theme.screens.lg);
+const { sm, md, lg } = config.theme.screens;
+
+const mobile = parseInt(sm);
+const tablet = parseInt(md);
+const desktop = parseInt(lg);
 
 export const swiperConfig = {
   services: {
@@ -14,7 +17,6 @@ export const swiperConfig = {
 
   gallery: parentClass => ({
     loop: true,
-    speed: 500,
     zoom: false,
     keyboard: {
       enabled: true,
@@ -25,10 +27,6 @@ export const swiperConfig = {
       nextEl: `.${parentClass}__swiper-next`,
       prevEl: `.${parentClass}__swiper-prev`,
     },
-    /* слайдов должно быть минимум вдвое больше */
-    slidesPerView: 3,
-    direction: 'vertical',
-    spaceBetween: 20,
     effect: 'coverflow',
     coverflowEffect: {
       rotate: 0,
@@ -44,10 +42,17 @@ export const swiperConfig = {
       },
     },
     breakpoints: {
+      [mobile]: {
+        // слайдов должно быть минимум вдвое больше
+        slidesPerView: 3,
+        spaceBetween: 30,
+        direction: 'vertical',
+      },
       [tablet]: {
-        spaceBetween: 25,
+        speed: 350,
         direction: 'horizontal',
         slidesPerView: 2,
+        spaceBetween: 25,
       },
     },
   }),

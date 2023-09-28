@@ -51,7 +51,7 @@ export const Contacts = () => {
             <FollowUs className="contacts__follow-us" />
           </div>
           {/* feedback */}
-          <FeedbackForm className="feedback" />
+          <FeedbackForm />
         </div>
       </div>
     </section>

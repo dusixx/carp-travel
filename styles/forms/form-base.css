@@ -1,0 +1,65 @@
+@layer components {
+  .form-field {
+    @apply relative h-max flex flex-col gap-[5px] text-inherit 
+      text-[12px] font-[200] leading-[2] tracking-[2.4px];
+  }
+
+  .form-field--multiline {
+    @apply flex-grow;
+  }
+
+  .form-field--multiline > textarea {
+    @apply flex-grow resize-none lg:text-[18px] lg:leading-[1.2];
+  }
+
+  .form-input-text {
+    @apply text-[13px] font-[200] leading-[1.85] tracking-tight
+      lg:text-[20px] lg:leading-[1.2];
+  }
+
+  .form-input-wrapper {
+    @apply form-input-text relative;
+  }
+
+  .form-input-wrapper .form-input {
+    @apply pl-[35px] lg:pl-[50px];
+  }
+
+  .form-input {
+    @apply form-input-text w-[100%] h-[24px] p-[8px] bg-button text-inherit 
+      outline-none border border-transparent
+      [&::placeholder]:opacity-40 lg:h-[28px] transition-colors;
+  }
+
+  .form-input:focus-visible {
+    @apply bg-white-10 border-white-20;
+  }
+
+  .form-input--invalid {
+    @apply text-failed border border-failed focus-visible:border-failed;
+  }
+
+  .form-input__error {
+    @apply absolute right-0 bottom-[-25px] z-50 flex items-center 
+      justify-end gap-[5px] leading-none text-failed;
+  }
+
+  .form-input__error-clear {
+    @apply button-base transition-transform;
+  }
+
+  .form-input__error-clear:hover,
+  .form-input__error-clear:focus-visible {
+    @apply scale-125 text-failed;
+  }
+
+  .form-field-group {
+    @apply flex flex-col gap-y-[25px] md:gap-y-[28px] 
+      lg:flex-row lg:gap-[20px] lg:w-[100%] lg:[&>label]:flex-1;
+  }
+
+  .form-submit-btn {
+    @apply button-base ml-auto text-[30px] font-[500] uppercase 
+      hover:text-white-50 focus-visible:text-white-50;
+  }
+}

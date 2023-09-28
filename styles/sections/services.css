@@ -15,7 +15,7 @@
 
 .services__content {
   @apply grid h-[100%] w-[100%] gap-y-[34px] gap-x-[20px]
-      md:grid-cols-[463px_1fr] lg:grid-cols-[607px_1fr];
+    md:grid-cols-[463px_1fr] lg:grid-cols-[607px_1fr];
 }
 
 .services__swiper {
@@ -25,14 +25,13 @@
 
 .services__counter {
   @apply text-buttonHover text-[43px] font-[100] leading-[1.2] 
-    max-md:ml-auto md:text-[67px] lg:text-[98px] lg:leading-normal
-      [&>span]:text-white;
+    max-md:ml-auto md:text-[67px] 
+    lg:text-[98px] lg:leading-normal
+  [&>span]:text-white;
 }
 
 .services__desc {
-  --desc-first-col-width: 270px;
-  @apply flex flex-col gap-[34px]
-      lg:grid lg:grid-cols-[var(--desc-first-col-width)_1fr] lg:gap-[60px];
+  @apply flex flex-col gap-[34px];
 }
 
 .services__tagline {
@@ -41,8 +40,9 @@
 
 .services__menu {
   @apply flex flex-col gap-[16px] w-[100%]
-      text-[20px] font-[200] leading-[0.85]
-      md:order-1 md:text-[22px] lg:text-[28px] col-span-2;
+    text-[20px] font-[200] leading-[0.85]
+    md:order-1 md:text-[22px] 
+    lg:text-[28px] lg:gap-[23px];
 }
 
 .services__menu-item {
@@ -50,17 +50,18 @@
 }
 
 .services__menu-item div[data-caption] {
-  @apply flex items-start gap-[60px] w-[100%];
+  @apply flex items-start gap-[50px] w-[100%];
 }
 
 .services__menu-item span[data-name] {
-  @apply flex items-center uppercase cursor-pointer 
-      lg:w-[var(--desc-first-col-width)] text-white-50
-      transition-colors hover:text-white focus-visible:text-white;
+  @apply flex items-center uppercase cursor-pointer tracking-tight
+    text-white-50 transition-colors 
+    hover:text-white focus-visible:text-white 
+    lg:w-[250px];
 }
 
 .services__menu-item--current span[data-name] {
-  @apply font-bold text-white before:content-['\0025C6\0000a0\0000a0'] before:text-[20px];
+  @apply font-[500] text-white before:content-['\0025C6\0000a0\0000a0'] before:text-[20px];
 }
 
 .services__menu-item span[data-tagline] {
@@ -73,6 +74,6 @@
 
 .services__about {
   @apply text-[14px] font-[200] leading-[1.43] text-justify hyphens-auto 
-      md:min-w-[220px] lg:w-[293px] md:order-3 row-start-2 col-start-2
-       md:text-[16px] md:leading-[1.25] lg:text-[18px] lg:leading-[1.33];
+    md:min-w-[221px] md:order-3 md:text-[13px] md:leading-[1.53] 
+    lg:w-[293px] lg:text-[18px] lg:leading-[1.33] lg:ml-auto;
 }

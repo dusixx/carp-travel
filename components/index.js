@@ -15,3 +15,7 @@ export * from './Counter';
 export * from './ServicesMenu';
 export * from './SwiperControls';
 export * from './FeedbackForm';
+export * from './Advantages';
+export * from './FormField';
+export * from './Checkbox';
+export * from './JoinUsForm';

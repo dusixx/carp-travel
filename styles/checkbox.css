@@ -1,0 +1,22 @@
+.checkbox {
+  @apply flex gap-[8px] cursor-pointer select-none;
+}
+
+.checkbox__input {
+  @apply appearance-none flex w-[22px] h-[22px] p-[3px] 
+    border border-white cursor-pointer;
+}
+
+.checkbox__input::after {
+  @apply content-[''] w-[14px] h-[14px]
+    transition-colors bg-white-10 
+    hover:bg-white-20 focus-visible:bg-white-20;
+}
+
+.checkbox__input:checked::after {
+  @apply bg-white;
+}
+
+.checkbox[disabled] {
+  @apply pointer-events-none;
+}

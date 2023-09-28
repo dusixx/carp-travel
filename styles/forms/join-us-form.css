@@ -1,0 +1,24 @@
+.join-us-form {
+  @apply flex flex-col;
+}
+
+.join-us-form .form-field-group {
+  @apply gap-[24px] gap-y-[18px] lg:max-w-[330px];
+}
+
+.join-us-form textarea {
+  @apply min-h-[196px] p-[10px];
+}
+
+.join-us-form .form-group {
+  @apply flex w-[100%];
+}
+
+.join-us-form .checkbox__caption {
+  @apply text-[12px] font-[200] leading-[1.8] 
+    md:w-[190px] lg:w-[250px] lg:leading-[2];
+}
+
+.form-field[name='phone'] .form-input-wrapper::before {
+  @apply content-['+38'] absolute top-[50%] left-[8px] -translate-y-1/2;
+}

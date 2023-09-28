@@ -1,0 +1,107 @@
+@layer components {
+  .appeal {
+    @apply h-max w-[180px] ml-auto mb-[36px] font-[200] 
+      text-[14px] leading-[1.43]
+      md:text-[13px] md:leading-[1.54] 
+      lg:text-[18px] lg:leading-[1.33];
+  }
+}
+
+.career {
+  @apply bg-career-bg page-bg;
+}
+
+.career__container {
+  @apply inner-container;
+}
+
+.career__content {
+  @screen md {
+    @apply grid grid-cols-[225px_1fr] gap-[20px];
+  }
+  @screen lg {
+    @apply grid-cols-[541px_1fr] gap-x-[50px];
+  }
+}
+
+.career .section-title {
+  @apply mb-[30px];
+  @screen md {
+    @apply col-start-1 mb-0 leading-none flex-nowrap;
+  }
+}
+
+.career__intro {
+  @apply appeal;
+  @screen md {
+    @apply col-start-2 row-start-1 w-[225px] mb-0 
+      text-justify hyphens-auto tracking-tight;
+  }
+  @screen lg {
+    @apply w-[290px];
+  }
+}
+
+.career__appeal {
+  @apply appeal max-md:tracking-tight;
+  @screen md {
+    @apply col-start-2 row-start-3 w-[180px] m-0;
+  }
+  @screen lg {
+    @apply w-[235px] col-start-2 row-start-2;
+  }
+}
+
+.career .join-us-form {
+  @screen md {
+    @apply col-start-2 row-start-3 w-[100%] h-max mt-auto;
+  }
+}
+
+.career .form-field-group {
+  @apply flex-col mb-[16px];
+  @screen md {
+    @apply flex-1 flex-wrap h-[315px] w-[100%];
+  }
+  @screen lg {
+    @apply mb-[30px];
+  }
+}
+
+.career .form-group {
+  @apply max-md:flex-col justify-between gap-[20px];
+}
+
+.career__subtitle {
+  @apply text-[30px] font-[200] uppercase mb-[36px] max-md:ml-auto;
+  @screen md {
+    @apply col-start-1 text-right;
+  }
+  @screen lg {
+    @apply w-[260px] mr-auto;
+  }
+}
+
+.career .advantages {
+  @apply flex flex-col gap-[18px] text-right w-[180px] mr-auto;
+  @screen md {
+    @apply col-start-1 w-[100%] gap-[25px];
+  }
+}
+
+.career .advantages__item {
+  @screen lg {
+    @apply flex gap-[24px];
+  }
+}
+
+.career .advantages__caption {
+  @apply mb-[12px] text-[14px] font-normal leading-[1.42]
+    md:whitespace-nowrap md:text-[16px] md:leading-[1.25] 
+    lg:text-[18px] lg:leading-[1.33] lg:w-[260px];
+}
+
+.career .advantages__desc {
+  @apply flex-1 text-[12px] font-[200] leading-[1.67]  
+    lg:text-left lg:w-[265px] lg:tracking-[0.17px];
+}

@@ -5,7 +5,7 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply text-textMain bg-[#151815];
+  @apply text-textMain bg-[#13191f];
 }
 
 *,

@@ -2,14 +2,10 @@
 @import './base.css';
 
 @import 'tailwindcss/components';
+@import './sections/index.css';
+@import './forms/index.css';
 @import './components.css';
-@import './header.css';
-@import './hero.css';
-@import './about.css';
-@import './services.css';
-@import './gallery.css';
-@import './contacts.css';
-@import './feedback-form.css';
 @import './mobile-menu.css';
+@import './checkbox.css';
 
 @import 'tailwindcss/utilities';

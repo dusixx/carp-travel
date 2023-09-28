@@ -1,0 +1,16 @@
+.feedback-form {
+  @apply flex flex-col gap-[25px] 
+    md:flex-row md:flex-wrap md:gap-[20px] lg:gap-[40px];
+}
+
+.feedback-form textarea.form-input {
+  @apply min-h-[190px] p-[10px] md:min-h-[220px];
+}
+
+.feedback-form textarea + .form-input__error {
+  @apply left-0 right-auto;
+}
+
+.feedback-form .form-group {
+  @apply flex flex-col flex-grow gap-[10px] lg:gap-[20px];
+}

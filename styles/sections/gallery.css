@@ -1,5 +1,5 @@
 .gallery {
-  @apply h-max bg-gallery-bg page-bg;
+  @apply bg-gallery-bg page-bg;
 }
 
 .gallery__container {
@@ -11,11 +11,11 @@
 }
 
 .gallery__swiper {
-  @apply w-[85%] max-md:h-[650px];
+  @apply max-md:w-[85%] max-md:h-[650px];
 }
 
 .gallery__swiper-slide {
-  @apply md:opacity-20 h-[33vh] max-sm:h-[190px] md:mt-[100px] md:h-[86px] lg:h-[225px];
+  @apply md:opacity-25 h-[33vh] max-sm:h-[190px] md:mt-[100px] md:h-[86px] lg:h-[225px];
 }
 
 .gallery__swiper-slide.swiper-slide-active {

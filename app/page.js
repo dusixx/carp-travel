@@ -1,6 +1,18 @@
 import Image from 'next/image';
 import { ToastContainer } from 'react-toastify';
-import { Hero, Gallery, Contacts, Services, About } from '@/sections';
+import config from '@/tailwind.config';
+
+const fontFamily = `${config.theme.extend.fontFamily}`;
+
+import {
+  Hero,
+  Gallery,
+  Contacts,
+  Services,
+  About,
+  Career,
+  CareerJoinUs,
+} from '@/sections';
 
 export default function Home() {
   return (
@@ -9,6 +21,8 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
+        <Career />
+        {/* <CareerJoinUs /> */}
         <Gallery />
         <Contacts />
       </main>

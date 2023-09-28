@@ -2,7 +2,7 @@ import throttle from 'lodash.throttle';
 import { useRef, useState, useEffect } from 'react';
 import config from '../tailwind.config';
 
-const maxWidth = parseInt(config.theme.screens.md) - 0.01;
+const maxWidth = parseInt(config.theme.screens.md) - 0.1;
 
 export const useHeaderMatchMedia = () => {
   const [shaded, setShaded] = useState(false);

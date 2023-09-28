@@ -33,6 +33,7 @@ export const Swiper = forwardRef(
               alt={`${name}`}
               fill
               objectFit="cover"
+              priority={true}
             />
           </swiper-slide>
         ))}

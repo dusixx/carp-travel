@@ -2,13 +2,17 @@
 const HERO_OVERLAY = 'rgba(2 15 8 / 0.6)';
 const GALLERY_OVERLAY = 'rgba(2 15 8 / 0.85)';
 const CONTACTS_OVERLAY = 'rgba(2 15 8 / 0.75)';
+const CONTACTS_OVERLAY_SEC = 'rgba(2 15 8 / 0.8)';
 const SERVICES_OVERLAY = 'rgba(2 15 8 / 0.5)';
 
 const PAGE_HEADER_GRADIENT_PRI =
   'linear-gradient(180deg, rgba(0 24 38 / 1), transparent 30%)';
 
 export const PAGE_HEADER_GRADIENT_SEC =
-  'linear-gradient(180deg, rgba(0 0 0 / 0.6), transparent 30%)';
+  'linear-gradient(180deg, rgba(0 0 0 / 0.6), transparent 40%)';
+
+export const PAGE_HEADER_GRADIENT_TER =
+  'linear-gradient(180deg, rgba(2 15 8 / 0.8), transparent 50%)';
 
 const config = {
   content: [
@@ -50,6 +54,7 @@ const config = {
         'gallery-bg': `${PAGE_HEADER_GRADIENT_SEC}, linear-gradient(${GALLERY_OVERLAY}, ${GALLERY_OVERLAY}), url(/gallery-bg.jpg);`,
         'contacts-bg': `${PAGE_HEADER_GRADIENT_PRI}, linear-gradient(${CONTACTS_OVERLAY}, ${CONTACTS_OVERLAY}), url(/contacts-bg.jpg);`,
         'about-bg': `${PAGE_HEADER_GRADIENT_PRI}, linear-gradient(${SERVICES_OVERLAY}, ${SERVICES_OVERLAY}), url(/about-bg.jpg);`,
+        'career-bg': `${PAGE_HEADER_GRADIENT_TER}, linear-gradient(${CONTACTS_OVERLAY_SEC}, ${CONTACTS_OVERLAY_SEC}), url(/career-bg.jpg);`,
       },
     },
   },
