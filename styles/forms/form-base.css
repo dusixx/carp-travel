@@ -1,15 +1,11 @@
 @layer components {
   .form-field {
-    @apply relative h-max flex flex-col gap-[5px] text-inherit 
+    @apply relative flex flex-col gap-[5px] text-inherit 
       text-[12px] font-[200] leading-[2] tracking-[2.4px];
   }
 
-  .form-field--multiline {
-    @apply flex-grow;
-  }
-
-  .form-field--multiline > textarea {
-    @apply flex-grow resize-none lg:text-[18px] lg:leading-[1.2];
+  .form-field--multiline textarea {
+    @apply resize-none lg:text-[18px] lg:leading-[1.2];
   }
 
   .form-input-text {
@@ -18,11 +14,7 @@
   }
 
   .form-input-wrapper {
-    @apply form-input-text relative;
-  }
-
-  .form-input-wrapper .form-input {
-    @apply pl-[35px] lg:pl-[50px];
+    @apply form-input-text relative h-[100%];
   }
 
   .form-input {
@@ -40,7 +32,7 @@
   }
 
   .form-input__error {
-    @apply absolute right-0 bottom-[-25px] z-50 flex items-center 
+    @apply absolute right-0 bottom-[-22px] z-50 flex items-center 
       justify-end gap-[5px] leading-none text-failed;
   }
 
@@ -54,8 +46,7 @@
   }
 
   .form-field-group {
-    @apply flex flex-col gap-y-[25px] md:gap-y-[28px] 
-      lg:flex-row lg:gap-[20px] lg:w-[100%] lg:[&>label]:flex-1;
+    @apply flex flex-col gap-y-[25px] md:gap-y-[28px];
   }
 
   .form-submit-btn {

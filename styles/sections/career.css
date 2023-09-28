@@ -17,7 +17,7 @@
 
 .career__content {
   @screen md {
-    @apply grid grid-cols-[225px_1fr] gap-[20px];
+    @apply grid grid-cols-[225px_1fr] gap-[22px];
   }
   @screen lg {
     @apply grid-cols-[541px_1fr] gap-x-[50px];
@@ -58,16 +58,6 @@
   }
 }
 
-.career .form-field-group {
-  @apply flex-col mb-[16px];
-  @screen md {
-    @apply flex-1 flex-wrap h-[315px] w-[100%];
-  }
-  @screen lg {
-    @apply mb-[30px];
-  }
-}
-
 .career .form-group {
   @apply max-md:flex-col justify-between gap-[20px];
 }
@@ -85,7 +75,7 @@
 .career .advantages {
   @apply flex flex-col gap-[18px] text-right w-[180px] mr-auto;
   @screen md {
-    @apply col-start-1 w-[100%] gap-[25px];
+    @apply col-start-1 w-[100%] gap-[30px];
   }
 }
 

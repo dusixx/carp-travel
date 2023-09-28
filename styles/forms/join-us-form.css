@@ -2,12 +2,21 @@
   @apply flex flex-col;
 }
 
+.join-us-form .form-fields {
+  @apply grid gap-[15px] md:grid-cols-[1fr_225px] 
+    lg:grid-cols-[1fr_290px] md:gap-[22px] mt-auto mb-[30px];
+}
+
 .join-us-form .form-field-group {
-  @apply gap-[24px] gap-y-[18px] lg:max-w-[330px];
+  @apply gap-y-[15px] h-max;
+}
+
+.join-us-form .form-field--multiline {
+  @apply min-h-[196px];
 }
 
 .join-us-form textarea {
-  @apply min-h-[196px] p-[10px];
+  @apply p-[10px] h-[100%];
 }
 
 .join-us-form .form-group {
@@ -21,4 +30,8 @@
 
 .form-field[name='phone'] .form-input-wrapper::before {
   @apply content-['+38'] absolute top-[50%] left-[8px] -translate-y-1/2;
+}
+
+.form-field[name='phone'] .form-input {
+  @apply pl-[35px] lg:pl-[50px];
 }

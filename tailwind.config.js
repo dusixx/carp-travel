@@ -29,6 +29,7 @@ const config = {
       sm: '320px',
       xs: '475px',
       md: '768px',
+      mds: '780px',
       lg: '1280px',
     },
     extend: {

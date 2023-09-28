@@ -39,39 +39,41 @@ export const JoinUsForm = props => {
       {...props}
       onSubmit={handleFormSubmit}
     >
-      <div className="form-field-group">
-        <FormField
-          name="fullName"
-          caption="Full name"
-          placeholder="John Smith"
-          onClearError={() => setError('fullName', null)}
-          {...regProps}
-        />
+      <div className="form-fields">
+        <div className="form-field-group">
+          <FormField
+            name="fullName"
+            caption="Full name"
+            placeholder="John Smith"
+            onClearError={() => setError('fullName', null)}
+            {...regProps}
+          />
 
-        <FormField
-          name="email"
-          caption="E-mail"
-          placeholder="johnsmith@email.com"
-          onClearError={() => setError('email', null)}
-          {...regProps}
-        />
+          <FormField
+            name="email"
+            caption="E-mail"
+            placeholder="johnsmith@email.com"
+            onClearError={() => setError('email', null)}
+            {...regProps}
+          />
 
-        <FormField
-          name="position"
-          caption="Position"
-          placeholder="Movie maker"
-          onClearError={() => setError('position', null)}
-          {...regProps}
-        />
+          <FormField
+            name="position"
+            caption="Position"
+            placeholder="Movie maker"
+            onClearError={() => setError('position', null)}
+            {...regProps}
+          />
 
-        <FormField
-          name="phone"
-          caption="Phone"
-          placeholder="(097) 12 34 567"
-          inputWrapper={true}
-          onClearError={() => setError('phone', null)}
-          {...regProps}
-        />
+          <FormField
+            name="phone"
+            caption="Phone"
+            placeholder="(097) 12 34 567"
+            inputWrapper={true}
+            onClearError={() => setError('phone', null)}
+            {...regProps}
+          />
+        </div>
 
         <FormField multiline={true} name="message" caption="Message" />
       </div>
@@ -80,8 +82,7 @@ export const JoinUsForm = props => {
         <Checkbox
           required
           disabled={!isValid}
-          caption="I confirm my consent to the processing of
-          personal data."
+          caption="I confirm my consent to the processing of personal data."
         />
         <button type="submit" className="form-submit-btn">
           send

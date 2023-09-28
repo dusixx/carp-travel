@@ -10,7 +10,6 @@ export const FormField = ({
   caption,
   errors,
   multiline,
-  inputWrapper,
   onClearError = Function.prototype,
   register = Function.prototype,
   validation,
@@ -29,19 +28,13 @@ export const FormField = ({
     <input {...inputProps} />
   );
 
-  const wrappedInputEl = inputWrapper ? (
-    <div className="form-input-wrapper">{inputEl}</div>
-  ) : (
-    inputEl
-  );
-
   return (
     <label
       className={clsx('form-field', multiline && 'form-field--multiline')}
       name={name}
     >
       <span>{caption}</span>
-      {wrappedInputEl}
+      <div className="form-input-wrapper">{inputEl}</div>
       {errorMessage && (
         <span className="form-input__error">
           <CloseBtn

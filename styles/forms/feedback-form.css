@@ -14,3 +14,7 @@
 .feedback-form .form-group {
   @apply flex flex-col flex-grow gap-[10px] lg:gap-[20px];
 }
+
+.feedback-form .form-field-group {
+  @apply lg:flex-row lg:gap-[20px] lg:w-[100%] /* lg:[&>label]:flex-1 */;
+}
