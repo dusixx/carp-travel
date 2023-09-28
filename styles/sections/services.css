@@ -74,6 +74,6 @@
 
 .services__about {
   @apply text-[14px] font-[200] leading-[1.43] text-justify hyphens-auto 
-    md:w-[221px] md:order-3 md:text-[13px] md:leading-[1.53] 
-    lg:w-[293px] lg:text-[18px] lg:leading-[1.33] mds:ml-auto;
+    md:w-[225px] md:order-3 md:text-[13px] md:leading-[1.53] 
+    lg:w-[290px] lg:text-[18px] lg:leading-[1.33] mds:ml-auto;
 }
