@@ -1,0 +1,29 @@
+@layer components {
+  .page-title {
+    @apply flex flex-col h-max ml-auto text-[37px] font-thin
+        tracking-[1.66px] uppercase leading-none
+        md:row-start-1 md:col-start-2
+        md:text-[67px] md:tracking-[8.71px] md:w-[230px]
+        lg:text-[98px] lg:tracking-normal lg:w-[305px];
+  }
+
+  .page-title__accent {
+    @apply font-medium;
+  }
+
+  .page-title__subtitle {
+    @apply text-[12px] font-light tracking-[9.48px]
+      md:text-[14px] md:tracking-[25.9px]
+      lg:text-[16px] lg:tracking-[36.48px];
+  }
+
+  .section-title {
+    @apply flex flex-wrap text-[40px] font-thin leading-[1.3] tracking-[-1.6px] uppercase
+      md:text-[67px] md:tracking-[-2.68px] md:leading-[1.2] 
+      lg:text-[98px] lg:tracking-[-3.92px];
+  }
+
+  .section-title__accent {
+    @apply font-medium;
+  }
+}

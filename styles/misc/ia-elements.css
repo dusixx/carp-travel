@@ -1,0 +1,27 @@
+@layer components {
+  .button-base {
+    @apply flex justify-center items-center p-0 outline-none
+      transition-colors hover:text-white-50 focus-visible:text-white-50;
+  }
+
+  .button-primary {
+    @apply button-base w-[100%] flex-grow-0 cornered py-[16px] uppercase cursor-pointer 
+      text-white bg-button text-[18px] font-[700] font-[inherit] leading-[1] lg:text-[32px];
+  }
+
+  .button-primary:hover,
+  .button-primary:focus-visible {
+    @apply bg-buttonHover text-white;
+  }
+
+  .link-base {
+    @apply relative inline-flex flex-wrap items-center justify-center 
+      h-max w-max outline-none;
+  }
+
+  .link-base::after {
+    @apply content-[''] absolute bottom-[3px] left-0 w-[100%] h-[1px] 
+      bg-white scale-0 hover:scale-100 focus-visible:scale-100 
+        transition-transform duration-150;
+  }
+}

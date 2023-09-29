@@ -1,0 +1,44 @@
+@layer components {
+  .inner-container {
+    @apply w-[100%] max-w-[1280px] max-md:px-[20px]
+      px-[30px] py-[70px] pb-[60px] 
+      md:py-[80px] md:pb-[70px]
+      lg:py-[120px] lg:pb-[100px]
+      my-0 mx-auto relative;
+  }
+
+  .cornered {
+    background: linear-gradient(to right, white 1px, transparent 1px) 0 0,
+      linear-gradient(to right, white 1px, transparent 1px) 0 100%,
+      linear-gradient(to left, white 1px, transparent 1px) 100% 0,
+      linear-gradient(to left, white 1px, transparent 1px) 100% 100%,
+      linear-gradient(to bottom, white 1px, transparent 1px) 0 0,
+      linear-gradient(to bottom, white 1px, transparent 1px) 100% 0,
+      linear-gradient(to top, white 1px, transparent 1px) 0 100%,
+      linear-gradient(to top, white 1px, transparent 1px) 100% 100%;
+
+    background-repeat: no-repeat;
+    background-size: 2rem 0.5rem;
+  }
+
+  .page-bg {
+    @apply bg-cover bg-center bg-fixed;
+  }
+
+  .close-btn,
+  .menu-btn {
+    @apply button-base;
+  }
+
+  .logo {
+    @apply transition-opacity hover:opacity-50 focus-visible:opacity-50;
+  }
+
+  .nav-menu {
+    @apply flex h-[100%] items-center justify-center;
+  }
+
+  .nav-menu__btn {
+    @apply button-base text-[14px] capitalize tracking-[1.4px] py-[34px];
+  }
+}

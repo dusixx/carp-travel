@@ -18,7 +18,7 @@
     md:grid-cols-[463px_1fr] lg:grid-cols-[607px_1fr];
 }
 
-.services__swiper {
+.services .swiper {
   @apply min-w-[280px] min-h-[215px] w-[100%]
     xs:h-[370px] lg:w-[610px] lg:h-[430px];
 }
@@ -36,40 +36,6 @@
 
 .services__tagline {
   @apply tagline lg:hidden;
-}
-
-.services__menu {
-  @apply flex flex-col gap-[16px] w-[100%]
-    text-[20px] font-[200] leading-[0.85]
-    md:order-1 md:text-[22px] 
-    lg:text-[28px] lg:gap-[23px];
-}
-
-.services__menu-item {
-  @apply flex items-center w-[100%];
-}
-
-.services__menu-item div[data-caption] {
-  @apply flex items-start gap-[50px] w-[100%];
-}
-
-.services__menu-item span[data-name] {
-  @apply flex items-center uppercase cursor-pointer tracking-tight
-    text-white-50 transition-colors 
-    hover:text-white focus-visible:text-white 
-    lg:w-[250px];
-}
-
-.services__menu-item--current span[data-name] {
-  @apply font-[500] text-white before:content-['\0025C6\0000a0\0000a0'] before:text-[20px];
-}
-
-.services__menu-item span[data-tagline] {
-  @apply tagline hidden leading-none text-white;
-}
-
-.services__menu-item--current span[data-tagline] {
-  @apply lg:inline;
 }
 
 .services__about {

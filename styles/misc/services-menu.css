@@ -1,0 +1,34 @@
+.services-menu {
+  @apply flex flex-col gap-[16px] w-[100%]
+    text-[20px] font-[200] leading-[0.85]
+    md:order-1 md:text-[22px] 
+    lg:text-[28px] lg:gap-[23px];
+}
+
+.services-menu__item {
+  @apply flex items-center w-[100%];
+}
+
+.services-menu__item div[data-caption] {
+  @apply flex items-start gap-[50px] w-[100%];
+}
+
+.services-menu__item button {
+  @apply button-base justify-start text-left uppercase tracking-tight 
+    text-white-50 transition-colors
+    hover:text-white focus-visible:text-white 
+    lg:w-[250px];
+}
+
+.services-menu__item--current button {
+  @apply font-[500] text-white
+    before:content-['\0025C6\0000a0\0000a0'] before:text-[20px];
+}
+
+.services-menu__item span[data-tagline] {
+  @apply tagline hidden leading-none text-white;
+}
+
+.services-menu__item--current span[data-tagline] {
+  @apply lg:inline;
+}

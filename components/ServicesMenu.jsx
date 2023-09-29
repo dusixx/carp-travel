@@ -2,33 +2,28 @@ import clsx from 'clsx';
 import { func, string, array, number } from 'prop-types';
 
 export const ServicesMenu = ({
-  parentClass,
   items,
   current,
   tagline = '',
   onClick = Function.prototype,
 }) => {
-  const menu = `${parentClass}__menu`;
-  const cls = {
-    menu,
-    menuItem: `${menu}-item`,
-    menuItemCurrent: `${menu}-item--current`,
-  };
-
   return (
-    <ul className={cls.menu}>
+    <ul className="services-menu">
       {items.map(({ name }, idx) => {
         const isCurrent = idx === current;
 
         return (
           <li
             key={name}
-            className={clsx(cls.menuItem, isCurrent && cls.menuItemCurrent)}
+            className={clsx(
+              'services-menu__item',
+              isCurrent && 'services-menu__item--current'
+            )}
           >
             <div data-caption>
-              <span data-name onClick={() => onClick(idx)}>
-                {name}
-              </span>
+              <button onClick={() => onClick(idx)}>
+                <span>{name}</span>
+              </button>
               {isCurrent && <span data-tagline>{tagline}</span>}
             </div>
           </li>
@@ -39,7 +34,6 @@ export const ServicesMenu = ({
 };
 
 ServicesMenu.propTypes = {
-  parentClass: string,
   items: array,
   onClick: func,
   current: number,

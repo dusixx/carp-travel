@@ -12,8 +12,6 @@ const storageKey = 'join-us-form';
 const MSG_SUBMIT_SUCCESS = 'The data has been sent. We will contact you';
 
 export const JoinUsForm = props => {
-  const [phone, setPhone] = useState('');
-
   const {
     register,
     handleSubmit,
@@ -72,8 +70,6 @@ export const JoinUsForm = props => {
             placeholder={ph.phone}
             inputWrapper={true}
             onClearError={() => setError('phone', null)}
-            onChange={e => setPhone(e.target.value)}
-            value={phone}
             {...regProps}
           />
         </div>

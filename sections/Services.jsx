@@ -35,7 +35,6 @@ export const Services = () => {
 
           <Swiper
             ref={swiperRef}
-            parentClass="services"
             data={servicesData}
             config={swiperConfig.services}
           />
@@ -43,7 +42,6 @@ export const Services = () => {
           <div className="services__desc">
             <span className="services__tagline">{tagline}</span>
             <ServicesMenu
-              parentClass="services"
               items={items}
               onClick={handleMenuItemClick}
               current={current}

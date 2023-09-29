@@ -4,8 +4,6 @@
 @import 'tailwindcss/components';
 @import './sections/index.css';
 @import './forms/index.css';
-@import './components.css';
-@import './mobile-menu.css';
-@import './checkbox.css';
+@import './misc/index.css';
 
 @import 'tailwindcss/utilities';

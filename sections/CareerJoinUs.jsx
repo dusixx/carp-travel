@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
 import throttle from 'lodash.throttle';
 import { careerData } from '@/data';
 import { JoinUsForm } from '@/components';
