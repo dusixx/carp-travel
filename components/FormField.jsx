@@ -12,14 +12,24 @@ export const FormField = ({
   multiline,
   onClearError = Function.prototype,
   register = Function.prototype,
+  onChange = Function.prototype,
   validation,
+  value,
 }) => {
   const errorMessage = errors?.[name]?.message;
+  const registeredField = register && register(name, validation?.[name]);
+
+  const handleInputChange = e => {
+    registeredField?.onChange?.(e);
+    onChange(e);
+  };
 
   const inputProps = {
+    ...registeredField,
     placeholder,
     className: clsx('form-input', errorMessage && 'form-input--invalid'),
-    ...(register && register(name, validation?.[name])),
+    onChange: handleInputChange,
+    value,
   };
 
   const inputEl = multiline ? (

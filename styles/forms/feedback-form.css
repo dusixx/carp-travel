@@ -3,11 +3,11 @@
     md:flex-row md:flex-wrap md:gap-[20px] lg:gap-[40px];
 }
 
-.feedback-form textarea.form-input {
+.feedback-form .form-field--multiline textarea {
   @apply min-h-[190px] p-[10px] md:min-h-[220px];
 }
 
-.feedback-form textarea + .form-input__error {
+.feedback-form .form-field--multiline .form-input__error {
   @apply left-0 right-auto;
 }
 
@@ -16,5 +16,5 @@
 }
 
 .feedback-form .form-field-group {
-  @apply lg:flex-row lg:gap-[20px] lg:w-[100%] /* lg:[&>label]:flex-1 */;
+  @apply lg:flex-row lg:gap-[20px] lg:w-[100%];
 }

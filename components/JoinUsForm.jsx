@@ -2,16 +2,18 @@
 
 import clsx from 'clsx';
 import { toast } from 'react-toastify';
-import { validation, placeholder } from '@/data';
+import { useState } from 'react';
+import { validation, placeholder as ph } from '@/data';
 import { useForm } from '@/hooks';
 import { FormField } from './FormField';
 import { Checkbox } from './Checkbox';
 
 const storageKey = 'join-us-form';
 const MSG_SUBMIT_SUCCESS = 'The data has been sent. We will contact you';
-const { fullName, email, position, phone, message } = placeholder;
 
 export const JoinUsForm = props => {
+  const [phone, setPhone] = useState('');
+
   const {
     register,
     handleSubmit,
@@ -19,6 +21,7 @@ export const JoinUsForm = props => {
     reset,
     setError,
     isValid,
+    control,
   } = useForm({ storageKey });
 
   const handleFormSubmit = handleSubmit(data => {
@@ -45,33 +48,32 @@ export const JoinUsForm = props => {
           <FormField
             name="fullName"
             caption="Full name"
-            placeholder={fullName}
+            placeholder={ph.fullName}
             onClearError={() => setError('fullName', null)}
             {...regProps}
           />
-
           <FormField
             name="email"
             caption="E-mail"
-            placeholder={email}
+            placeholder={ph.email}
             onClearError={() => setError('email', null)}
             {...regProps}
           />
-
           <FormField
             name="position"
             caption="Position"
-            placeholder={position}
+            placeholder={ph.position}
             onClearError={() => setError('position', null)}
             {...regProps}
           />
-
           <FormField
             name="phone"
             caption="Phone"
-            placeholder={phone}
+            placeholder={ph.phone}
             inputWrapper={true}
             onClearError={() => setError('phone', null)}
+            onChange={e => setPhone(e.target.value)}
+            value={phone}
             {...regProps}
           />
         </div>
@@ -80,7 +82,7 @@ export const JoinUsForm = props => {
           multiline={true}
           name="message"
           caption="Message"
-          placeholder={message}
+          placeholder={ph.message}
         />
       </div>
 

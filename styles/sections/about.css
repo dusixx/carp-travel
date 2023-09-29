@@ -26,11 +26,13 @@
 .about__tagline {
   @apply flex flex-col 
     w-[180px] text-[14px] leading-[1.4] uppercase
-    md:w-[230px] md:text-[16px] md:leading-[1.25] 
-    lg:w-[250px] lg:text-[18px] lg:leading-[1.33]
-    md:mt-auto md:mr-auto lg:col-start-3 lg:row-start-2
-    max-md:ml-auto max-md:mt-[30px]
-    [&>span:nth-of-type(2)]:ml-auto;
+    max-md:ml-auto max-md:mt-[30px] [&>span:nth-of-type(2)]:ml-auto;
+  @screen md {
+    @apply w-[230px] text-[16px] leading-[1.25] mt-auto;
+  }
+  @screen lg {
+    @apply w-[250px] text-[18px] leading-[1.33] col-start-3 row-start-2;
+  }
 }
 
 .about__tagline > span:last-of-type {
