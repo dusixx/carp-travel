@@ -3,13 +3,13 @@ export const ContactItem = ({ label, value, className }) => {
   const list = Array.isArray(value) ? value : [value];
 
   return (
-    <div className={`contacts-item ${className ?? ''}`}>
-      <ul className="contacts-item__value">
+    <div className={`contact-item ${className ?? ''}`}>
+      <ul className="contact-item__value">
         {list.map((itm, idx) => (
           <li key={idx}>{itm}</li>
         ))}
       </ul>
-      <span className="contacts-item__label">{label}</span>
+      <span className="contact-item__label">{label}</span>
     </div>
   );
 };

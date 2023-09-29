@@ -28,7 +28,6 @@ export const Services = () => {
           <SectionTitle caption="We offer" accent={1} />
 
           <Counter
-            className="services__counter"
             value={current}
             total={items.length}
           />

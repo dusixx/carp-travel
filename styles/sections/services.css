@@ -23,7 +23,7 @@
     xs:h-[370px] lg:w-[610px] lg:h-[430px];
 }
 
-.services__counter {
+.services .counter {
   @apply text-buttonHover text-[43px] font-[100] leading-[1.2] 
     max-md:ml-auto md:text-[67px] 
     lg:text-[98px] lg:leading-normal

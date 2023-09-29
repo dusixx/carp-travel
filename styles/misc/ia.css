@@ -1,12 +1,13 @@
 @layer components {
   .button-base {
-    @apply flex justify-center items-center p-0 outline-none
+    @apply flex justify-center items-center p-0
       transition-colors hover:text-white-50 focus-visible:text-white-50;
   }
 
   .button-primary {
-    @apply button-base w-[100%] flex-grow-0 cornered py-[16px] uppercase cursor-pointer 
-      text-white bg-button text-[18px] font-[700] font-[inherit] leading-[1] lg:text-[32px];
+    @apply button-base cornered w-[100%] flex-grow-0 py-[16px] 
+      uppercase cursor-pointer text-white bg-button text-[18px] 
+      font-[700] font-[inherit] leading-[1] lg:text-[32px];
   }
 
   .button-primary:hover,
@@ -15,8 +16,8 @@
   }
 
   .link-base {
-    @apply relative inline-flex flex-wrap items-center justify-center 
-      h-max w-max outline-none;
+    @apply relative inline-flex flex-wrap 
+      items-center justify-center h-max w-max;
   }
 
   .link-base::after {

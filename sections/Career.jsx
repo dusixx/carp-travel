@@ -1,25 +1,16 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { careerData } from '@/data';
+import { useScreenMatchMedia } from '@/hooks';
 import { Advantages, SectionTitle, JoinUsForm } from '@/components';
 import { CareerJoinUs } from './CareerJoinUs';
 import config from '../tailwind.config';
 
-const maxWidth = parseInt(config.theme.screens.md) - 0.1;
+const tablet = parseInt(config.theme.screens.md) - 0.1;
 const { intro, advantages, appeal } = careerData;
 
 export const Career = () => {
-  const [mobile, setMobile] = useState(true);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(`(max-width: ${maxWidth}px)`);
-    const handleChangeMediaQuery = e => {
-      setMobile(e.matches);
-    };
-    mediaQuery.addEventListener('change', handleChangeMediaQuery);
-    handleChangeMediaQuery(mediaQuery);
-  }, []);
+  const mobile = useScreenMatchMedia({ query: `(max-width: ${tablet}px)` });
 
   return (
     <>

@@ -33,3 +33,8 @@ export const getServicesBgi = bgiURL => {
 
   return { backgroundImage: str.join(',') };
 };
+
+export const isHtmlElement = v => {
+  const type = Object.prototype.toString.call(v).match(/[^\s]+(?=\])/);
+  return /^html\w*element$/i.test(type);
+};

@@ -6,14 +6,18 @@
   @apply inner-container;
 }
 
-.contacts-item {
+.contact-item {
   @apply flex gap-[19px] text-[14px] text-inherit leading-[1.7] text-right
       md:text-[16px] md:leading-[1.5] md:mr-auto 
       lg:text-[18px] lg:leading-[1.33];
 }
 
-.contacts-item__label {
+.contact-item__label {
   @apply w-[80px] text-[12px] font-[200] leading-[1.66] text-left lg:leading-[2];
+}
+
+.contact-item__value {
+  @apply flex flex-1 flex-col md:w-[221px];
 }
 
 .contacts__wrapper {
@@ -27,10 +31,6 @@
 
 .contacts__group {
   @apply flex flex-col gap-[30px] lg:gap-[64px];
-}
-
-.contacts-item__value {
-  @apply flex flex-1 flex-col md:w-[221px];
 }
 
 .contacts__follow-us {
