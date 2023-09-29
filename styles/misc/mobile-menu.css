@@ -1,10 +1,10 @@
 .mobile-menu {
-  @apply fixed top-0 left-0 w-[100%] h-[100%] p-[20px] z-[999] 
+  @apply fixed top-0 left-0 w-[100%] h-[100%] p-[20px] z-[999] overflow-auto
        flex-col justify-center items-center bg-shaded backdrop-blur-[4px];
 }
 
 .mobile-menu .nav-menu {
-  @apply flex-col items-center text-center my-auto;
+  @apply flex-col items-center text-center min-h-[430px];
 }
 
 .mobile-menu .nav-menu__btn {

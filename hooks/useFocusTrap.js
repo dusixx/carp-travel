@@ -12,7 +12,10 @@ export const useFocusTrap = ({ target }) => {
       container.setAttribute('tabindex', '-1');
       container.addEventListener('focusout', handleFocusout);
 
-      return () => container.removeEventListener('focusout', handleFocusout);
+      return () => {
+        container.removeAttribute('tabindex');
+        container.removeEventListener('focusout', handleFocusout);
+      };
     } catch {}
   }, [target]);
 };
