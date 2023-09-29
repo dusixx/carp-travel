@@ -4,7 +4,7 @@
 }
 
 .mobile-menu .nav-menu {
-  @apply flex-col items-center text-center min-h-[430px];
+  @apply flex-col items-center text-center h-[90%] min-h-[430px];
 }
 
 .mobile-menu .nav-menu__btn {

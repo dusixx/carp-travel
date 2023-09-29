@@ -3,9 +3,8 @@ import { useState, useEffect } from 'react';
 export const useScreenMatchMedia = ({
   query,
   handler = Function.prototype,
-  initialState = false,
 }) => {
-  const [matched, setMatched] = useState(initialState);
+  const [matched, setMatched] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia(query);
