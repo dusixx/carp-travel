@@ -9,7 +9,7 @@ export const useFocusTrap = ({ target }) => {
       const handleFocusout = e => {
         !container.contains(e.relatedTarget) && (firstEl || container).focus();
       };
-      container.setAttribute('tabindex', '0');
+      container.setAttribute('tabindex', '-1');
       container.addEventListener('focusout', handleFocusout);
 
       return () => container.removeEventListener('focusout', handleFocusout);
