@@ -1,10 +1,10 @@
 'use client';
 
 import { careerData } from '@/data';
+import { Advantages, JoinUsForm, SectionTitle } from '@/components';
 import { useScreenMatchMedia } from '@/hooks';
-import { Advantages, SectionTitle, JoinUsForm } from '@/components';
+import config from '../../tailwind.config';
 import { CareerJoinUs } from './CareerJoinUs';
-import config from '../tailwind.config';
 
 const tablet = parseInt(config.theme.screens.md) - 0.1;
 const { intro, advantages, appeal } = careerData;

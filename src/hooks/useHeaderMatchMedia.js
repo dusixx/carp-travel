@@ -1,7 +1,9 @@
+'use client';
+
 import throttle from 'lodash.throttle';
-import { useRef, useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import config from '../../tailwind.config';
 import { useScreenMatchMedia } from './useScreenMatchMedia';
-import config from '../tailwind.config';
 
 const tablet = parseInt(config.theme.screens.md) - 0.1;
 

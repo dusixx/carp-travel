@@ -1,5 +1,5 @@
 import { aboutData } from '@/data';
-import { SectionTitle, AboutTagline } from '@/components';
+import { AboutTagline, SectionTitle } from '@/components';
 
 const { whoWeAre, ourBeliefs, ourMethods } = aboutData;
 

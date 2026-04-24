@@ -1,7 +1,7 @@
-import './globals.css';
+import { meta } from '@/data/meta';
 import { Inter } from 'next/font/google';
 import { Header } from '../sections/Header';
-import { meta } from '@/data/meta';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 const { description } = meta;

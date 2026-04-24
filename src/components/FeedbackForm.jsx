@@ -1,9 +1,8 @@
 'use client';
 
-import clsx from 'clsx';
-import { toast } from 'react-toastify';
-import { validation, placeholder as ph } from '@/data';
+import { placeholder as ph, validation } from '@/data';
 import { useForm } from '@/hooks';
+import { toast } from 'react-toastify';
 import { FormField } from './FormField';
 
 const storageKey = 'feedback-form';
@@ -18,7 +17,7 @@ export const FeedbackForm = props => {
     setError,
   } = useForm({ storageKey });
 
-  const handleFormSubmit = handleSubmit(data => {
+  const handleFormSubmit = handleSubmit(_ => {
     toast.success(MSG_SUBMIT_SUCCESS);
     reset();
   });

@@ -1,6 +1,6 @@
-import { func } from 'prop-types';
-import { scrollToTarget } from '@/helpers';
+import { scrollToTarget } from '@/common';
 import { navItems } from '@/data';
+import { func } from 'prop-types';
 
 export const NavMenu = ({ onItemClick = Function.prototype }) => {
   return (

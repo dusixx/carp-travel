@@ -1,6 +1,5 @@
 'use client';
 
-import throttle from 'lodash.throttle';
 import { careerData } from '@/data';
 import { JoinUsForm } from '@/components';
 

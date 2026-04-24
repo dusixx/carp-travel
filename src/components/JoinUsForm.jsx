@@ -1,12 +1,10 @@
 'use client';
 
-import clsx from 'clsx';
-import { toast } from 'react-toastify';
-import { useState } from 'react';
-import { validation, placeholder as ph } from '@/data';
+import { placeholder as ph, validation } from '@/data';
 import { useForm } from '@/hooks';
-import { FormField } from './FormField';
+import { toast } from 'react-toastify';
 import { Checkbox } from './Checkbox';
+import { FormField } from './FormField';
 
 const storageKey = 'join-us-form';
 const MSG_SUBMIT_SUCCESS = 'The data has been sent. We will contact you';
@@ -19,11 +17,10 @@ export const JoinUsForm = props => {
     reset,
     setError,
     isValid,
-    control,
   } = useForm({ storageKey });
 
   const handleFormSubmit = handleSubmit(data => {
-    console.log(data);
+    console.debug(data);
     toast.success(MSG_SUBMIT_SUCCESS);
     reset();
   });
@@ -79,6 +76,7 @@ export const JoinUsForm = props => {
           name="message"
           caption="Message"
           placeholder={ph.message}
+          {...regProps}
         />
       </div>
 

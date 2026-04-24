@@ -1,10 +1,8 @@
-import config from '../tailwind.config';
+import config from '../../tailwind.config';
 
-const { sm, md, lg } = config.theme.screens;
-
+const { sm, md } = config.theme.screens;
 const mobile = parseInt(sm);
 const tablet = parseInt(md);
-const desktop = parseInt(lg);
 
 export const swiperConfig = {
   services: {

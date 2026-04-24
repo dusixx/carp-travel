@@ -38,3 +38,11 @@ export const isHtmlElement = v => {
   const type = Object.prototype.toString.call(v).match(/[^\s]+(?=\])/);
   return /^html\w*element$/i.test(type);
 };
+
+export const JSONParse = v => {
+  try {
+    return JSON.parse(v);
+  } catch {
+    return null;
+  }
+};

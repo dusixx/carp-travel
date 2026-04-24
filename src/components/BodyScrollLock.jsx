@@ -1,7 +1,7 @@
 'use client';
 
+import { isVScrollBarVisible } from '@/common';
 import { useEffect } from 'react';
-import { isVScrollBarVisible } from '@/helpers';
 
 export const BodyScrollLock = () => {
   useEffect(() => {
@@ -20,8 +20,6 @@ export const BodyScrollLock = () => {
 
     return () => {
       body.style.cssText = bodyCSSText;
-
-      // предотвращаем автоскролинг
       root.style.scrollBehavior = 'auto';
       window.scrollTo({ top });
       root.style.removeProperty('scroll-behavior');

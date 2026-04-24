@@ -1,10 +1,10 @@
 'use client';
 
-import { func } from 'prop-types';
 import { useFocusTrap, useKeydown } from '@/hooks';
+import { func } from 'prop-types';
 import { BodyScrollLock } from './BodyScrollLock';
-import { NavMenu } from './NavMenu';
 import { CloseBtn } from './CloseBtn';
+import { NavMenu } from './NavMenu';
 
 export const MobileMenu = ({
   onItemClick = Function.prototype,

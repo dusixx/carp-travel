@@ -1,9 +1,9 @@
 'use client';
 
-import { useRef, useState } from 'react';
-import { getServicesBgi } from '@/helpers';
+import { getServicesBgi } from '@/common';
+import { Counter, SectionTitle, ServicesMenu, Swiper } from '@/components';
 import { servicesData, swiperConfig } from '@/data';
-import { SectionTitle, Swiper, Counter, ServicesMenu } from '@/components';
+import { useRef, useState } from 'react';
 
 const BG_PATH = '/services/bg';
 
@@ -11,7 +11,7 @@ export const Services = () => {
   const swiperRef = useRef(null);
   const [current, setCurrent] = useState(0);
 
-  const handleMenuItemClick = (idx, height, offsetTop) => {
+  const handleMenuItemClick = idx => {
     const swiper = swiperRef.current?.swiper;
     setCurrent(idx);
     swiper?.slideToLoop?.(idx);
@@ -27,10 +27,7 @@ export const Services = () => {
         <div className="services__content">
           <SectionTitle caption="We offer" accent={1} />
 
-          <Counter
-            value={current}
-            total={items.length}
-          />
+          <Counter value={current} total={items.length} />
 
           <Swiper
             ref={swiperRef}

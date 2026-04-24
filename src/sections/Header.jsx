@@ -1,15 +1,8 @@
 'use client';
 
-import clsx from 'clsx';
+import { Logo, MenuBtn, MobileMenu, NavMenu } from '@/components';
 import { useHeaderMatchMedia } from '@/hooks';
-
-import {
-  BodyScrollLock,
-  Logo,
-  MobileMenu,
-  NavMenu,
-  MenuBtn,
-} from '@/components';
+import clsx from 'clsx';
 
 export const Header = () => {
   const { headerRef, showMenu, setShowMenu, shaded, showNav } =

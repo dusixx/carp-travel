@@ -3,10 +3,10 @@
 import { contactsData } from '@/data';
 
 import {
-  SectionTitle,
   ContactItem,
-  FollowUs,
   FeedbackForm,
+  FollowUs,
+  SectionTitle,
 } from '@/components';
 
 const { tel, email } = contactsData;

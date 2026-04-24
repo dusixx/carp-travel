@@ -1,4 +1,4 @@
-import { scrollToTarget } from '@/helpers';
+import { scrollToTarget } from '@/common';
 
 const JOIN_NOW_TARGET = '#contacts';
 
