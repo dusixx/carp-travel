@@ -1,3 +1,17 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["prettier"],
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_[^_].*$|^_$",
+        "varsIgnorePattern": "^_[^_].*$|^_$",
+        "caughtErrorsIgnorePattern": "^_[^_].*$|^_$"
+      }
+    ],
+    "@next/next/no-img-element": "warn",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "react-hooks/exhaustive-deps": "warn"
+  }
 }
