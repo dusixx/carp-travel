@@ -1,4 +1,4 @@
-import { func } from 'prop-types';
+import { func, number } from 'prop-types';
 import { IoIosMenu as IconMenu } from 'react-icons/io';
 
 export const MenuBtn = ({
@@ -19,4 +19,5 @@ export const MenuBtn = ({
 
 MenuBtn.propTypes = {
   onClick: func,
+  size: number,
 };
