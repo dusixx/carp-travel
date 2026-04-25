@@ -1,4 +1,7 @@
+'use client';
+
 import clsx from 'clsx';
+import { string, oneOfType, arrayOf, number } from 'prop-types';
 
 export const SectionTitle = ({ caption, accent }) => {
   const accentList = Array.isArray(accent) ? accent : [accent];
@@ -15,4 +18,9 @@ export const SectionTitle = ({ caption, accent }) => {
       ))}
     </h2>
   );
+};
+
+SectionTitle.propTypes = {
+  caption: string,
+  accent: oneOfType([number, arrayOf(number)]),
 };

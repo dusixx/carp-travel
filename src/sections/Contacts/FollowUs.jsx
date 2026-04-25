@@ -4,7 +4,7 @@ const list = ['facebook', 'instagram', 'youtube', 'tiktok'];
 const socials = list.map(name => (
   <a
     key={name}
-    className="link-base"
+    className="link"
     aria-label={`${name} link`}
     href={`https://${name}.com`}
     rel="noreferrer noopener nofollow"

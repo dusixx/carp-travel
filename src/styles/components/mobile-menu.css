@@ -1,0 +1,16 @@
+.mobile-menu {
+  @apply fixed top-0 left-0 w-[100%] h-[100%] p-[20px] z-[999] overflow-auto
+       flex-col justify-center items-center bg-shaded backdrop-blur-[4px];
+}
+
+.mobile-menu__close {
+  @apply close-btn ml-auto;
+}
+
+.mobile-nav {
+  @apply nav-menu flex-col items-center text-center h-[90%] min-h-[430px];
+}
+
+.mobile-nav__btn {
+  @apply nav-menu__btn text-[18px] tracking-[1.8px];
+}

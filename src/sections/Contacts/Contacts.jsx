@@ -18,7 +18,7 @@ export const Contacts = () => {
                 label="Phone number"
                 value={ContactsData.Phone.map(itm => (
                   <a
-                    className="link-base"
+                    className="link"
                     key={itm}
                     href={`tel:${itm.replace(/[^\d]/g, '')}`}
                     aria-label="Contact phone"
@@ -31,7 +31,7 @@ export const Contacts = () => {
                 label="E-mail"
                 value={
                   <a
-                    className="link-base"
+                    className="link"
                     href={`mailto:${ContactsData.Email}`}
                     aria-label="Contact email"
                   >

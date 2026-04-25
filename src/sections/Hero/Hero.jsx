@@ -23,7 +23,7 @@ export const Hero = () => {
           <div className="hero__join-now">
             <p className="hero__offer">{HeroData.WeOffer}</p>
             <button
-              className="button-primary"
+              className="hero__join-now-btn"
               onClick={() => scrollToTarget(JOIN_NOW_TARGET)}
             >
               join now

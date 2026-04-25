@@ -1,0 +1,15 @@
+.submit {
+  @apply form-submit-btn;
+}
+
+.link {
+  @apply link-base;
+}
+
+.nav-menu {
+  @apply flex h-[100%] items-center justify-center;
+}
+
+.nav-menu__btn {
+  @apply button-base text-[14px] capitalize tracking-[1.4px] py-[34px];
+}

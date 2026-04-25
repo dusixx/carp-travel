@@ -2,8 +2,8 @@
 @import './base.css';
 
 @import 'tailwindcss/components';
-@import './sections/index.css';
 @import './forms/index.css';
-@import './misc/index.css';
+@import './components/index.css';
+@import './sections/index.css';
 
 @import 'tailwindcss/utilities';

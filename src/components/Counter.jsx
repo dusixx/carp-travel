@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import { number } from 'prop-types';
 
 export const Counter = ({ value, total }) => {
   const totalRef = useRef(String(total)?.padStart?.(2, '0') ?? '0');
@@ -12,4 +13,9 @@ export const Counter = ({ value, total }) => {
       {totalRef.current}
     </span>
   );
+};
+
+Counter.propTypes = {
+  value: number,
+  total: number,
 };

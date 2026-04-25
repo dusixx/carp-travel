@@ -85,7 +85,7 @@ export const JoinUsForm = props => {
           disabled={!isValid}
           caption="I confirm my consent to the processing of personal data."
         />
-        <button type="submit" className="form-submit-btn">
+        <button type="submit" className="submit">
           send
         </button>
       </div>

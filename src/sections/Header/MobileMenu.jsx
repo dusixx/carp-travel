@@ -15,8 +15,13 @@ export const MobileMenu = ({
   return (
     <div className="mobile-menu">
       <BodyScrollLock />
-      <CloseBtn onClick={onCloseClick} title="Close" aria-label="Menu close" />
-      <NavMenu onItemClick={onItemClick} />
+      <CloseBtn
+        onClick={onCloseClick}
+        title="Close"
+        aria-label="Menu close"
+        className="mobile-menu__close"
+      />
+      <NavMenu onItemClick={onItemClick} className="mobile-nav" />
     </div>
   );
 };

@@ -62,7 +62,7 @@ export const FeedbackForm = props => {
           onClearError={() => setError('message', null)}
           {...regProps}
         />
-        <button type="submit" className="form-submit-btn">
+        <button type="submit" className="submit">
           send
         </button>
       </div>
