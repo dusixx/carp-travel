@@ -1,9 +1,9 @@
 'use client';
 
-import { careerData } from '@/data';
-import { JoinUsForm } from '@/components';
+import { CareerData } from './Career.constants.js';
+import { JoinUsForm } from './JoinUsForm.jsx';
 
-const { appeal } = careerData;
+const { appeal } = CareerData;
 
 export const CareerJoinUs = () => {
   return (

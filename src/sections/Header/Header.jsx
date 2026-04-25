@@ -1,8 +1,12 @@
 'use client';
 
-import { Logo, MenuBtn, MobileMenu, NavMenu } from '@/components';
 import { useHeaderMatchMedia } from '@/hooks';
 import clsx from 'clsx';
+import Image from 'next/image';
+import logo from '../../../public/logo.svg';
+import { MenuBtn } from './MenuBtn';
+import { MobileMenu } from './MobileMenu';
+import { NavMenu } from './NavMenu';
 
 export const Header = () => {
   const { headerRef, showMenu, setShowMenu, shaded, showNav } =
@@ -15,7 +19,14 @@ export const Header = () => {
         className={clsx('header', shaded && 'header--shaded')}
       >
         <div className="header__container">
-          <Logo />
+          <a href="/">
+            <Image
+              className="logo"
+              src={logo}
+              alt="Carp travel logo"
+              priority={true}
+            />
+          </a>
           {showNav ? (
             <nav className="header__nav-links">
               <NavMenu />

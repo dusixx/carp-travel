@@ -1,4 +1,4 @@
-export const heroData = {
+export const HeroData = {
   bgPhotoCaption:
     'Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel',
 

@@ -1,4 +1,4 @@
-export const aboutData = {
+export const AboutData = {
   whoWeAre: (
     <>
       <span>a team of enthusiasts</span> who are fully committed to the mission

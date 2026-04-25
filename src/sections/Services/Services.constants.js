@@ -1,4 +1,4 @@
-export const servicesData = {
+export const ServicesData = {
   imgDir: '/services',
   items: [
     {

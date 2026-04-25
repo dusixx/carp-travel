@@ -1,15 +1,12 @@
 'use client';
 
-import { contactsData } from '@/data';
+import { SectionTitle } from '@/components';
+import { ContactItem } from './ContactItem.jsx';
+import { ContactsData } from './Contacts.constants.js';
+import { FeedbackForm } from './FeedbackForm.jsx';
+import { FollowUs } from './FollowUs.jsx';
 
-import {
-  ContactItem,
-  FeedbackForm,
-  FollowUs,
-  SectionTitle,
-} from '@/components';
-
-const { tel, email } = contactsData;
+const { tel, email } = ContactsData;
 
 export const Contacts = () => {
   return (

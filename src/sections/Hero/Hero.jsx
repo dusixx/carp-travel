@@ -1,9 +1,12 @@
 'use client';
 
-import { heroData } from '@/data';
-import { JoinNowBtn, PageTitle, SectionTitle } from '@/components';
+import { scrollToTarget } from '@/common';
+import { PageTitle, SectionTitle } from '@/components';
+import { HeroData } from './Hero.constants.js';
 
-const { bgPhotoCaption, weOffer } = heroData;
+const JOIN_NOW_TARGET = '#contacts';
+
+const { bgPhotoCaption, weOffer } = HeroData;
 
 export const Hero = () => {
   return (
@@ -21,7 +24,12 @@ export const Hero = () => {
 
           <div className="hero__join-now">
             <p className="hero__offer">{weOffer}</p>
-            <JoinNowBtn />
+            <button
+              className="button-primary"
+              onClick={() => scrollToTarget(JOIN_NOW_TARGET)}
+            >
+              join now
+            </button>
           </div>
         </div>
       </div>

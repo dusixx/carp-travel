@@ -1,9 +1,8 @@
 'use client';
 
+import { BodyScrollLock, CloseBtn } from '@/components';
 import { useFocusTrap, useKeydown } from '@/hooks';
 import { func } from 'prop-types';
-import { BodyScrollLock } from './BodyScrollLock';
-import { CloseBtn } from './CloseBtn';
 import { NavMenu } from './NavMenu';
 
 export const MobileMenu = ({

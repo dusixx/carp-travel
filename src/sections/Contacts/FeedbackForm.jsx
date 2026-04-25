@@ -1,9 +1,9 @@
 'use client';
 
-import { placeholder as ph, validation } from '@/data';
+import { Placeholder, validation } from '@/common';
+import { FormField } from '@/components';
 import { useForm } from '@/hooks';
 import { toast } from 'react-toastify';
-import { FormField } from './FormField';
 
 const storageKey = 'feedback-form';
 const MSG_SUBMIT_SUCCESS = 'The data has been sent. We will contact you';
@@ -37,7 +37,7 @@ export const FeedbackForm = props => {
     >
       <div className="form-field-group">
         <FormField
-          placeholder={ph.fullName}
+          placeholder={Placeholder.FullName}
           name="fullName"
           caption="Full name"
           onClearError={() => setError('fullName', null)}
@@ -45,7 +45,7 @@ export const FeedbackForm = props => {
         />
 
         <FormField
-          placeholder={ph.email}
+          placeholder={Placeholder.Email}
           name="email"
           caption="E-mail"
           onClearError={() => setError('email', null)}
@@ -58,7 +58,7 @@ export const FeedbackForm = props => {
           multiline={true}
           name="message"
           caption="Message"
-          placeholder={ph.message}
+          placeholder={Placeholder.Message}
           onClearError={() => setError('message', null)}
           {...regProps}
         />

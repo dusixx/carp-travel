@@ -1,10 +1,9 @@
 'use client';
 
-import { placeholder as ph, validation } from '@/data';
+import { Placeholder, validation } from '@/common';
+import { Checkbox, FormField } from '@/components';
 import { useForm } from '@/hooks';
 import { toast } from 'react-toastify';
-import { Checkbox } from './Checkbox';
-import { FormField } from './FormField';
 
 const storageKey = 'join-us-form';
 const MSG_SUBMIT_SUCCESS = 'The data has been sent. We will contact you';
@@ -43,28 +42,28 @@ export const JoinUsForm = props => {
           <FormField
             name="fullName"
             caption="Full name"
-            placeholder={ph.fullName}
+            placeholder={Placeholder.FullName}
             onClearError={() => setError('fullName', null)}
             {...regProps}
           />
           <FormField
             name="email"
             caption="E-mail"
-            placeholder={ph.email}
+            placeholder={Placeholder.Email}
             onClearError={() => setError('email', null)}
             {...regProps}
           />
           <FormField
             name="position"
             caption="Position"
-            placeholder={ph.position}
+            placeholder={Placeholder.Position}
             onClearError={() => setError('position', null)}
             {...regProps}
           />
           <FormField
             name="phone"
             caption="Phone"
-            placeholder={ph.phone}
+            placeholder={Placeholder.Phone}
             inputWrapper={true}
             onClearError={() => setError('phone', null)}
             {...regProps}
@@ -75,7 +74,7 @@ export const JoinUsForm = props => {
           multiline={true}
           name="message"
           caption="Message"
-          placeholder={ph.message}
+          placeholder={Placeholder.Message}
           {...regProps}
         />
       </div>

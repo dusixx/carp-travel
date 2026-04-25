@@ -1,7 +1,7 @@
-import { aboutData } from '@/data';
-import { AboutTagline, SectionTitle } from '@/components';
+import { SectionTitle } from '@/components';
+import { AboutData } from './About.constants.js';
 
-const { whoWeAre, ourBeliefs, ourMethods } = aboutData;
+const { whoWeAre, ourBeliefs, ourMethods } = AboutData;
 
 export const About = () => {
   return (
@@ -15,7 +15,11 @@ export const About = () => {
             <p className="about__para">{ourBeliefs}</p>
           </div>
 
-          <AboutTagline />
+          <div className="about__tagline">
+            <span>From vacationers</span>
+            <span>to active travelers</span>
+            <span>we have a tour for everyone.</span>
+          </div>
 
           <p className="about__para about__para--our-methods">{ourMethods}</p>
         </div>

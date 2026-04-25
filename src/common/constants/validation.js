@@ -33,14 +33,6 @@ export const validation = {
 
   phone: {
     required: 'Field is required',
-    // pattern: {
-    //   value: /^\s*[A-Z][a-z]+(\s+[A-Z][a-z]+)?\s*$/,
-    //   message: 'Invalid name',
-    // },
-    // maxLength: {
-    //   value: 150,
-    //   message: 'Max length: 150',
-    // },
   },
 
   message: {

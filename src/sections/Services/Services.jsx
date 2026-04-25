@@ -1,9 +1,10 @@
 'use client';
 
-import { getServicesBgi } from '@/common';
-import { Counter, SectionTitle, ServicesMenu, Swiper } from '@/components';
-import { servicesData, swiperConfig } from '@/data';
+import { getServicesBgi, swiperConfig } from '@/common';
+import { Counter, SectionTitle, Swiper } from '@/components';
 import { useRef, useState } from 'react';
+import { ServicesData } from './Services.constants.js';
+import { ServicesMenu } from './ServicesMenu.jsx';
 
 const BG_PATH = '/services/bg';
 
@@ -17,7 +18,7 @@ export const Services = () => {
     swiper?.slideToLoop?.(idx);
   };
 
-  const { items } = servicesData;
+  const { items } = ServicesData;
   const { tagline, about } = items[current];
   const bgiPath = `${BG_PATH}/services-bg-${current + 1}.jpg`;
 
@@ -31,7 +32,7 @@ export const Services = () => {
 
           <Swiper
             ref={swiperRef}
-            data={servicesData}
+            data={ServicesData}
             config={swiperConfig.services}
           />
 

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { func, string, array, number } from 'prop-types';
+import { array, func, number, string } from 'prop-types';
 
 export const ServicesMenu = ({
   items,

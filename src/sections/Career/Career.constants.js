@@ -1,4 +1,4 @@
-export const careerData = {
+export const CareerData = {
   intro: [
     'Your chance to join our passionate team in Carpathian tourism.',
     'Seeking talented professionals to share our common mission.',
