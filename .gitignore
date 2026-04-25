@@ -6,5 +6,6 @@ dist/
 .env*
 *.tsbuildinfo
 next-env.d.ts
--*
+backup/
+_support/
 .vscode
