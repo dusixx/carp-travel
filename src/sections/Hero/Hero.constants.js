@@ -1,8 +1,8 @@
 export const HeroData = {
-  bgPhotoCaption:
+  PhotoCaption:
     'Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel',
 
-  weOffer: [
+  WeOffer: [
     'We offer you unforgettable trips to the most beautiful parts of',
     'the Carpathians. Enjoy stunning views, exciting expeditions, and',
     'the best service!',

@@ -6,8 +6,6 @@ import { ContactsData } from './Contacts.constants.js';
 import { FeedbackForm } from './FeedbackForm.jsx';
 import { FollowUs } from './FollowUs.jsx';
 
-const { tel, email } = ContactsData;
-
 export const Contacts = () => {
   return (
     <section className="contacts" id="contacts">
@@ -16,10 +14,9 @@ export const Contacts = () => {
         <div className="contacts__wrapper">
           <div className="contacts__info">
             <div className="contacts__group">
-              {/* phone */}
               <ContactItem
                 label="Phone number"
-                value={tel.map(itm => (
+                value={ContactsData.Phone.map(itm => (
                   <a
                     className="link-base"
                     key={itm}
@@ -30,24 +27,21 @@ export const Contacts = () => {
                   </a>
                 ))}
               />
-              {/* email */}
               <ContactItem
                 label="E-mail"
                 value={
                   <a
                     className="link-base"
-                    href={`mailto:${email}`}
+                    href={`mailto:${ContactsData.Email}`}
                     aria-label="Contact email"
                   >
-                    {email}
+                    {ContactsData.Email}
                   </a>
                 }
               />
             </div>
-            {/* socials */}
             <FollowUs className="contacts__follow-us" />
           </div>
-          {/* feedback */}
           <FeedbackForm />
         </div>
       </div>

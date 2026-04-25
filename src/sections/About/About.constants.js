@@ -1,5 +1,5 @@
 export const AboutData = {
-  whoWeAre: (
+  WhoWeAre: (
     <>
       <span>a team of enthusiasts</span> who are fully committed to the mission
       of creating unforgettable and extraordinary trips to the most beautiful
@@ -8,7 +8,7 @@ export const AboutData = {
       their magical atmosphere.
     </>
   ),
-  ourBeliefs: (
+  OurBeliefs: (
     <>
       <span>We believe</span> that nature has the power to inspire, strengthen
       character and provide new perspectives. Therefore, each of our tours is
@@ -16,7 +16,7 @@ export const AboutData = {
       creating unforgettable memories.
     </>
   ),
-  ourMethods: (
+  OurMethods: (
     <>
       <span>We use methods</span> that are time-tested and proven. Our expert
       guides with in-depth knowledge of the Carpathian landscapes lead you

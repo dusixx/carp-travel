@@ -3,8 +3,6 @@
 import { CareerData } from './Career.constants.js';
 import { JoinUsForm } from './JoinUsForm.jsx';
 
-const { appeal } = CareerData;
-
 export const CareerJoinUs = () => {
   return (
     <section className="career">
@@ -15,7 +13,7 @@ export const CareerJoinUs = () => {
         }}
       >
         <div className="career__container">
-          <p className="career__appeal">{appeal}</p>
+          <p className="career__appeal">{CareerData.Appeal}</p>
           <JoinUsForm />
         </div>
       </div>

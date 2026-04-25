@@ -5,7 +5,7 @@ import { FormField } from '@/components';
 import { useForm } from '@/hooks';
 import { toast } from 'react-toastify';
 
-const storageKey = 'feedback-form';
+const STORAGE_KEY = 'feedback-form';
 const MSG_SUBMIT_SUCCESS = 'The data has been sent. We will contact you';
 
 export const FeedbackForm = props => {
@@ -15,7 +15,7 @@ export const FeedbackForm = props => {
     formState: { errors },
     reset,
     setError,
-  } = useForm({ storageKey });
+  } = useForm({ storageKey: STORAGE_KEY });
 
   const handleFormSubmit = handleSubmit(_ => {
     toast.success(MSG_SUBMIT_SUCCESS);

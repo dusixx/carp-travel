@@ -6,8 +6,6 @@ import { HeroData } from './Hero.constants.js';
 
 const JOIN_NOW_TARGET = '#contacts';
 
-const { bgPhotoCaption, weOffer } = HeroData;
-
 export const Hero = () => {
   return (
     <section className="hero">
@@ -20,10 +18,10 @@ export const Hero = () => {
             accent={0}
           />
 
-          <p className="hero__photo-caption">{bgPhotoCaption}</p>
+          <p className="hero__photo-caption">{HeroData.PhotoCaption}</p>
 
           <div className="hero__join-now">
-            <p className="hero__offer">{weOffer}</p>
+            <p className="hero__offer">{HeroData.WeOffer}</p>
             <button
               className="button-primary"
               onClick={() => scrollToTarget(JOIN_NOW_TARGET)}

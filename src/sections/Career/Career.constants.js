@@ -1,10 +1,10 @@
 export const CareerData = {
-  intro: [
+  Intro: [
     'Your chance to join our passionate team in Carpathian tourism.',
     'Seeking talented professionals to share our common mission.',
   ].join(' '),
 
-  advantages: [
+  Advantages: [
     {
       caption: 'Professional development',
       desc: 'We offer growth opportunities and a creative environment to nurture your talents.',
@@ -23,7 +23,7 @@ export const CareerData = {
     },
   ],
 
-  appeal: [
+  Appeal: [
     "Don't miss your opportunity!",
     'Fill out the form right now and join our team!',
   ].join(' '),
