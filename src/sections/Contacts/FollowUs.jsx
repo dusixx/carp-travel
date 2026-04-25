@@ -1,3 +1,4 @@
+import { string } from 'prop-types';
 import { ContactItem } from './ContactItem';
 
 const list = ['facebook', 'instagram', 'youtube', 'tiktok'];
@@ -17,3 +18,7 @@ const socials = list.map(name => (
 export const FollowUs = ({ className }) => (
   <ContactItem className={className} label="Follow us" value={socials} />
 );
+
+FollowUs.propTypes = {
+  className: string,
+};
